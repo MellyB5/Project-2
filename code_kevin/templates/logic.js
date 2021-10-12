@@ -248,7 +248,7 @@ var overlayMaps = {
 // Define a map object
 var myMap = L.map("map", {
   center: [-25.27, 133.77],
-  zoom: 5,
+  zoom: 4,
   layers: [streetmap, WA_bushfire, SA_bushfire, VIC_bushfire, NSW_bushfire, QLD_bushfire, NT_bushfire]
 });
 
