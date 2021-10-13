@@ -1,6 +1,6 @@
 //read in data
 d3.json("data/protected_animals.json").then((dataA) => {
-    //console.log(dataA);
+    console.log(dataA);
 
     var numAnimals = Object.keys(dataA).length;
 
@@ -13,7 +13,7 @@ d3.json("data/protected_animals.json").then((dataA) => {
         var states = dataA[whichAnimal].states;
         var type = dataA[whichAnimal].type;
         var distribution = dataA[whichAnimal].distribution;
-        var status = dataA[whichAnimal].status;
+
 
         // choose silhouette to go on card
         var filenameImage = "";
@@ -37,23 +37,63 @@ d3.json("data/protected_animals.json").then((dataA) => {
 
     function newAnimal() {
         whichAnimal = Math.floor(Math.random() * (numAnimals));
-        console.log(whichAnimal);
+        // console.log(whichAnimal);
         getAnimal(whichAnimal);
+        return(whichAnimal);
+        }
+
+    function getStatus(dataA, whichAnimal) {
+        status = dataA[whichAnimal].status;
+        return(status)
+    }
+
+    function getDistribution(dataA, whichAnimal) {
+        distribution = dataA[whichAnimal].distribution;
+        return(distribution)
     }
 
     // initialise page
     var whichAnimal = 10;
     getAnimal(whichAnimal);
+    // var test = newAnimal(whichAnimal);
+    // console.log(`'test ${test}'`)
+    var status = getStatus(dataA, whichAnimal);
+    console.log(status);
+    var distribution = getDistribution(dataA, whichAnimal);
 
-    // start over on button click
+    // // start over on button click
+    // d3.select("#choose-animal")
+    //     .on("click", newAnimal);
+
+            // start over on button click
     d3.select("#choose-animal")
-        .on("click", newAnimal);
+    .on("click", function(){
+        test=newAnimal(whichAnimal);
+        console.log(`'test ${test}'`)
+    });
 
-var data = [0, 1];
+    d3.select('#liveAlertBtn')
+    .on("click", function(){
+        var alertPlaceholder = d3.select('#liveAlertPlaceholder');
+        var message = "";
+        if (sliderFill.value() === 0){
+            message = "oh, but you haven't guessed yet";
+        }
+        else {
+            // getStatus
+            message =`"your answer was ${sliderFill.value()} actual is ${distribution}"`;} ;
+        console.log(sliderFill.value())
+        alertPlaceholder.html(`'<div class="alert alert-info alert-dismissible fade show" role="alert"> ${message} <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'`)
+
+    })
+
+
+
+    var data = [0, 1];
 
     // Fill
     var flame = d3.select("#flame");
-    
+
     var sliderFill = d3
         .sliderBottom()
         .min(d3.min(data))
@@ -61,10 +101,15 @@ var data = [0, 1];
         .width(300)
         .tickFormat(d3.format(',.0%'))
         .ticks(5)
-        .default(0.3)
+        .default(0)
         .fill('#2196f3')
         .on('onchange', val => {
             d3.select('p#value-fill').text(d3.format(',.0%')(val));
+            // // alert
+            // var alertPlaceholder = d3.select('#liveAlertPlaceholder')
+            // // var alertTrigger = d3.select('#liveAlertBtn')
+            // var message = `"your answer was ${val} actual is "`;
+            // alertPlaceholder.html(`'<div class="alert alert-info alert-dismissible fade show" role="alert"> ${message} <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'`)
         });
 
     var gFill = d3
@@ -86,14 +131,14 @@ var data = [0, 1];
         .append('g')
         .attr('transform', 'translate(30,30)');
 
-        var box = flame
+    var box = flame
         .append('rect')
         .attr('width', 100)
         .attr('height', 100)
         .attr('transform', 'translate(400,0)')
         .attr('fill', "pink");
 
-        
+
 
     // Color picker
     var num2hex = rgb => {
