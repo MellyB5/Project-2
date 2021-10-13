@@ -14,15 +14,28 @@ d3.json("data/protected_animals.json").then((data) => {
         var distribution = data[whichAnimal].distribution;
         var status = data[whichAnimal].status;
 
+        // chosse silhouette to go on card
+        var filenameImage = "";
+        if (type === "Bird") {filenameImage = "images/Bird-Silhouette.svg"}
+        else if (type === "Fish") {filenameImage = "images/Fish-Silhouette.svg"}
+        else if (type === "Reptile") {filenameImage = "images/Reptile-Silhouette.svg"}
+        else if (type === "Spider") {filenameImage = "images/Spider-Silhouette.svg"}
+        else if (type === "Frog") {filenameImage = "images/Frog-Silhouette.svg"}
+        else if (type === "Mammal") {filenameImage = "images/Mammal-Silhouette.svg"}
+        else if (type === "Insect") {filenameImage = "images/Insect-Silhouette.svg"};
+        console.log(filenameImage);
+        
+
         // put relevant data into animal card
         d3.select("#common-name").text(`${common}`);
         d3.select("#scientific-name").text(`${scientific}`);
         d3.select("#animal-type").text(`Type: ${type}`);
         d3.select("#animal-states").text(`Found in: ${states}`);
+        d3.select("#animal-image").html(`'<img src=${filenameImage} class="card-img-top" alt="animal type silhouette" id="image-silhouette">'`);
     }
 
      // initialise page
-    var whichAnimal = 34;
+    var whichAnimal = 28;
     getAnimal(whichAnimal);
 
     // Simple
