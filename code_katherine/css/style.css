@@ -32,5 +32,6 @@ body {
 
 #image-silhouette {
   width: 100px;
+  height: 100px;
   fill:aquamarine;
 }

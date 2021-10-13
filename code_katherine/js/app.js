@@ -2,6 +2,7 @@
 d3.json("data/protected_animals.json").then((data) => {
     //console.log(data);
 
+    var numAnimals = Object.keys(data).length;
 
     // function to get the animal data
     function getAnimal(whichAnimal) {
@@ -14,7 +15,7 @@ d3.json("data/protected_animals.json").then((data) => {
         var distribution = data[whichAnimal].distribution;
         var status = data[whichAnimal].status;
 
-        // chosse silhouette to go on card
+        // choose silhouette to go on card
         var filenameImage = "";
         if (type === "Bird") { filenameImage = "images/Bird-Silhouette.svg" }
         else if (type === "Fish") { filenameImage = "images/Fish-Silhouette.svg" }
@@ -23,7 +24,7 @@ d3.json("data/protected_animals.json").then((data) => {
         else if (type === "Frog") { filenameImage = "images/Frog-Silhouette.svg" }
         else if (type === "Mammal") { filenameImage = "images/Mammal-Silhouette.svg" }
         else if (type === "Insect") { filenameImage = "images/Insect-Silhouette.svg" };
-        console.log(filenameImage);
+        //console.log(filenameImage);
 
 
         // put relevant data into animal card
@@ -36,7 +37,7 @@ d3.json("data/protected_animals.json").then((data) => {
 
     function newAnimal() {
         console.log("went to function")
-        whichAnimal = 14;
+        whichAnimal = Math.floor(Math.random()*(numAnimals));
         console.log(whichAnimal);
         getAnimal(whichAnimal);
     }
