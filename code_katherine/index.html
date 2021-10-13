@@ -31,15 +31,15 @@
     <div class="row">
       <div class="card text-dark bg-light mb-3" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title">Common Name</h5>
-          <p class="card-text">Scientific Name</p>
+          <h5 class="card-title" id="common-name">Common Name</h5>
+          <p class="card-text" id="scientific-name">Scientific Name</p>
         </div>
-        <div><img src="..." class="card-img-top" alt="..."></div>
+        <div><img src="images/Spider-Silhouette.svg" class="card-img-top" alt="..." id="animal-image"></div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">type</li>
-          <li class="list-group-item">states</li>
+          <li class="list-group-item" id="animal-type">type</li>
+          <li class="list-group-item" id="animal-states">states</li>
         </ul>
-        <div class="card-footer">
+        <div class="card-footer" id="threatened-status">
           Vulnerability
         </div>
       </div>
@@ -124,7 +124,17 @@
 
   <!-- Footer-->
   <div id="footer">
-    <p>The Coding Boot Camp&copy;2016</p>
+    <div class="card">
+      <div class="card-header">
+        Quote
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>The Earth is what we all have in common</p>
+          <footer class="blockquote-footer">Wendell Berry <cite title="Source Title">Source Title</cite></footer>
+        </blockquote>
+      </div>
+    </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

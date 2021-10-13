@@ -1,15 +1,28 @@
 //read in data
 d3.json("data/protected_animals.json").then((data) => {
-    console.log(data);
+    //console.log(data);
 
     
     // function to get the animal data
     function getAnimal(whichAnimal){
-        console.log(data[whichAnimal])
+        //console.log(data[whichAnimal])
+        // extract data for chosen animal
+        var common = data[whichAnimal].common;
+        var scientific = data[whichAnimal].scientific;
+        var states = data[whichAnimal].states;
+        var type = data[whichAnimal].type;
+        var distribution = data[whichAnimal].distribution;
+        var status = data[whichAnimal].status;
+
+        // put relevant data into animal card
+        d3.select("#common-name").text(`${common}`);
+        d3.select("#scientific-name").text(`${scientific}`);
+        d3.select("#animal-type").text(`Type: ${type}`);
+        d3.select("#animal-states").text(`Found in: ${states}`);
     }
 
      // initialise page
-    var whichAnimal = 4;
+    var whichAnimal = 34;
     getAnimal(whichAnimal);
 
     // Simple
