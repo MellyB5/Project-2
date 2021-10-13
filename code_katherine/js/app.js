@@ -36,7 +36,6 @@ d3.json("data/protected_animals.json").then((dataA) => {
     }
 
     function newAnimal() {
-        console.log("went to function")
         whichAnimal = Math.floor(Math.random() * (numAnimals));
         console.log(whichAnimal);
         getAnimal(whichAnimal);
@@ -53,6 +52,8 @@ d3.json("data/protected_animals.json").then((dataA) => {
 var data = [0, 1];
 
     // Fill
+    var flame = d3.select("#flame");
+    
     var sliderFill = d3
         .sliderBottom()
         .min(d3.min(data))
@@ -78,92 +79,21 @@ var data = [0, 1];
 
     d3.select('p#value-fill').text(d3.format(',.0%')(sliderFill.value()));
 
-
-
-
-    // Simple
-    var data = [0, 0.1, 0.3, 0.5, 0.8, 1];
-
-    var sliderSimple = d3
-        .sliderBottom()
-        .min(d3.min(data))
-        .max(d3.max(data))
-        .width(300)
-        .tickFormat(d3.format('.0%'))
-        .ticks(5)
-        .default(0.3)
-        .on('onchange', val => {
-            d3.select('p#value-simple').text(d3.format('.2%')(val));
-        });
-
-    var gSimple = d3
-        .select('div#slider-simple')
+    flame
         .append('svg')
-        .attr('width', 500)
-        .attr('height', 100)
+        .attr('width', 600)
+        .attr('height', 400)
         .append('g')
         .attr('transform', 'translate(30,30)');
 
-    gSimple.call(sliderSimple);
-
-    d3.select('p#value-simple').text(d3.format('.2%')(sliderSimple.value()));
-
-    // Step
-    var sliderStep = d3
-        .sliderBottom()
-        .min(d3.min(data))
-        .max(d3.max(data))
-        .width(300)
-        .tickFormat(d3.format('.0%'))
-        .ticks(5)
-        .step(0.005)
-        .default(0.4)
-        .on('onchange', val => {
-            d3.select('p#value-step').text(d3.format('.0%')(val));
-        });
-
-    var gStep = d3
-        .select('div#slider-step')
-        .append('svg')
-        .attr('width', 500)
+        var box = flame
+        .append('rect')
+        .attr('width', 100)
         .attr('height', 100)
-        .append('g')
-        .attr('transform', 'translate(30,30)');
+        .attr('transform', 'translate(400,0)')
+        .attr('fill', "pink");
 
-    gStep.call(sliderStep);
-
-    d3.select('p#value-step').text(d3.format('.2%')(sliderStep.value()));
-
-    // Range
-    var sliderRange = d3
-        .sliderBottom()
-        .min(d3.min(data))
-        .max(d3.max(data))
-        .width(300)
-        .tickFormat(d3.format('.2%'))
-        .ticks(5)
-        .default([0.015, 0.02])
-        .fill('#2196f3')
-        .on('onchange', val => {
-            d3.select('p#value-range').text(val.map(d3.format('.2%')).join('-'));
-        });
-
-    var gRange = d3
-        .select('div#slider-range')
-        .append('svg')
-        .attr('width', 500)
-        .attr('height', 100)
-        .append('g')
-        .attr('transform', 'translate(30,30)');
-
-    gRange.call(sliderRange);
-
-    d3.select('p#value-range').text(
-        sliderRange
-            .value()
-            .map(d3.format('.2%'))
-            .join('-')
-    );
+        
 
     // Color picker
     var num2hex = rgb => {
