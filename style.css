@@ -5,3 +5,7 @@
 #myCarousel{
   top: 45%;
 }
+.jumbotron {
+  background-image: url("Images/bushfire1.jpeg");
+  background-size: cover;
+}
