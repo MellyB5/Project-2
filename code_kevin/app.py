@@ -14,13 +14,13 @@ mongo = PyMongo(app, uri="mongodb://localhost:27017/AU_bushfire")
 def home():
 
     # # Return template and data
-    return render_template("Bushfire_Area.html")
+    return render_template("index.html")
 
-@app.route("/tes")
+@app.route("/bushfire_map.html")
 def tes():
 
     # Redirect back to home page
-    return render_template("Bushfire_Area.html")
+    return render_template("bushfire_map.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
