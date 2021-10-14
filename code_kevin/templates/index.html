@@ -12,27 +12,28 @@
     width: 70%;
     margin: auto;
   }
-
-
   .display-3{
-    color:rgb(0, 0, 0);
-    font-weight: bold;
+  position: absolute;
+  left:35%;
+  top: 1%;
+  color:rgb(0, 0, 0);
+  font-weight:normal;
+  font-size: 200%;
   }
   #myCarousel{
     top: 45%;
   }
   .jumbotron {
     background-image: url("static/Images/bushfire1.jpeg");
-    background-size: cover;
+    height: 20px
   }
-
   .navbar_ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: rgb(155, 84, 67);
-  }
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(155, 84, 67);
+    }
 
   .navbar_li {
     float: left;
@@ -49,23 +50,24 @@
   .navbar_li a:hover {
     background-color: #111;
   }
-
   </style>
-  <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/style - Copy')}}"> -->
+  <!-- <link rel="stylesheet" href="style.css"> -->
 </head> 
 <body class="text" style="background-color: brown;">
     <div class="container">
         <div class="jumbotron text-center" src="{{url_for('static', filename='Images/bushfire1.jpeg')}}" style="height: 400x; background-position: center; background-size: cover">
-            <h1 class="display-3"><b>Bushfires Australia</b></h1>
+            <h1 class="display-3" style="margin-top: 0px; padding-top: 0px"><b>Bushfires Australia</b></h1>
         </div>
     </div>
+
+    <!-- Nav Bar -->
     <div class="container">
       <ul class="navbar_ul">
         <li class="navbar_li"><a class="active" href="/">Home</a></li>
         <li class="navbar_li"><a href="##">Health Impact</a></li>
         <li class="navbar_li"><a href="/bushfire_map.html">Bushfire Boundaries</a></li>
-        <li class="navbar_li"><a href="#">Volunteer Statistics</a></li>
         <li class="navbar_li"><a href="##">Environmental Impact - Wildlife</a></li>
+        <li class="navbar_li"><a href="/Volunteer_info/volunteers.html">Volunteer Statistics</a></li>
       </ul>
     </div>
 
@@ -100,7 +102,7 @@
       
           <div class="item">
             <a href= "/bushfire_map.html">
-            <img src="{{url_for('static', filename='Images/sign.jpeg')}}" alt="Boundaries" width="460" height="300"/>
+              <img src="{{url_for('static', filename='Images/sign.jpeg')}}" alt="Boundaries" width="460" height="300"/>
             </a>
             <div class="carousel-caption">
               <h3>Bushfire Boundaries</h3>
@@ -127,7 +129,6 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-      <br>
-      <script type="text/javascript" src="{{url_for('static', filename='js/home.js')}}"></script>
+  
 </body>
 </html>
