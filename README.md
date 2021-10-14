@@ -7,3 +7,6 @@ Bushfire impacts in Australia in terms of;
 Data visualisations;
  - Map of bushfire locations
  - Graphs on health statistics
+
+
+https://mellyb5.github.io/Project-2/
