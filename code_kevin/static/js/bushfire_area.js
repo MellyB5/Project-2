@@ -1,17 +1,14 @@
 // use d3 json to read the json file that was extracted from MongoDB
 
-d3.json("static/js/AU_bushfire_2020.json").then(data=>{
+d3.json("/bushfire_get_data").then(data=>{
   console.log(data)
   // create variables to store fire coordinates in json file for each state
-  var fire_id=Object.entries(data.fire_coordinates)
-  var WA_fires=fire_id[0][1]
-  var SA_fires=fire_id[1][1]
-  var VIC_fires=fire_id[2][1]
-  var NSW_fires=fire_id[3][1]
-  var QLD_fires=fire_id[4][1]
-  var NT_fires=fire_id[5][1]
-
-
+  var WA_fires=data[0].fire_coordinates;
+  var SA_fires=data[1].fire_coordinates;
+  var VIC_fires=data[2].fire_coordinates;
+  var NSW_fires=data[3].fire_coordinates;
+  var QLD_fires=data[4].fire_coordinates;
+  var NT_fires=data[5].fire_coordinates;
 
   // Define arrays to hold created bushfire location of each respective states which can be passed on to leaflet
     var WA_fire=[];
@@ -133,18 +130,13 @@ d3.json("static/js/AU_bushfire_2020.json").then(data=>{
 
   // add a popup that shows each states' population upon mouseover
   // create variables to store state area coordinates, state name, and state population
-  var state_coordinates=Object.entries(data.state_coordinates)
-  var state_territory=Object.entries(data.territory)
-
-  console.log(state_territory[0][1].name)
-  console.log(state_territory[0][1].population)
-
-  for (var i=0; i<state_coordinates.length; i++){
-    L.polygon(state_coordinates[i][1],{stroke: false,
+  
+  for (var i=0; i<data.length; i++){
+    L.polygon(data[i].state_coordinates,{stroke: false,
       fillOpacity: 0.0,
       color: "black",
       fillColor: "white"})
-      .bindPopup("State: "+ state_territory[i][1].name + "<br> State Population: "+state_territory[i][1].population)
+      .bindPopup("State: "+ data[i].territory.name + "<br> State Population: "+data[i].territory.population)
       .addTo(myMap).on('mouseover', function (e) {this.openPopup()})
       .on('mouseout', function (e) {this.closePopup()});
   }

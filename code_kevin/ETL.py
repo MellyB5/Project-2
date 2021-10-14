@@ -16,7 +16,7 @@ client = pymongo.MongoClient(conn)
 # Connect to a database. Will create one if not already available.
 db = client.AU_bushfire
 
-
+# import the following information into MongoDB
 fire_location = [
     {
         'fire_coordinates': [[
@@ -155,13 +155,24 @@ fire_location = [
     }
 ]
 
+# Collections inside bushfire databse
 c=db.AU_busfire_area_2020
 
+# If there's already a collection, drop it and replace it with the new ones.
 c.drop()
 c.insert_many(fire_location)
+
+# The below code was obtained from https://kb.objectrocket.com/mongo-db/export-mongodb-documents-as-csv-html-and-json-files-in-python-using-pandas-347
+
+# make an API call to the MongoDB server using a Collection object
 cursor=c.find()
 
+# After you make the API call find(), and receive the PyMongo Cursor object, pass it to the list() function to access all documents.
 mongo_docs=list(cursor)
+
+# The next step is to do a pandas.core.series.Series conversion from the MongoDB documents. * >NOTE: Series objects are one-dimensional with indexing support. This compliments MongoDB document indexing requirements.
+# Get a Pandas Series object index and alter it
+
 series_obj = pandas.Series({"a key":"a value"})
 print ("series_obj:", type(series_obj))
 
@@ -169,8 +180,10 @@ series_obj = pandas.Series( {"one":"index"} )
 series_obj.index = [ "one" ]
 print ("index:", series_obj.index)
 
+# Store documents in a Dataframe object
 docs = pandas.DataFrame(columns=[])
 
+# Time for iteration through the function enumerate() and then new Pandas Series objects creation
 for num, doc in enumerate( mongo_docs ):
     # convert ObjectId() to str
     doc["_id"] = str(doc["_id"])
@@ -184,3 +197,20 @@ for num, doc in enumerate( mongo_docs ):
     docs = docs.append( series_obj )
 
 docs.to_json("static/js/AU_bushfire_2020.json") # return JSON data
+
+
+# # alternative method - refer to https://stackoverflow.com/questions/49153020/how-to-dump-a-collection-to-json-file-using-pymongo
+# from bson.json_util import dumps
+# from pymongo import MongoClient
+
+# if __name__ == '__main__':
+#     client = MongoClient()
+#     db = client.AU_bushfire
+#     collection = db.AU_busfire_area_2020
+#     cursor = collection.find({})
+#     with open('test.json', 'w') as file:
+#         file.write('[')
+#         for document in cursor:
+#             file.write(dumps(document))
+#             file.write(',')
+#         file.write(']')
