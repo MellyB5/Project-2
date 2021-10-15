@@ -8,7 +8,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 from config import postgresql_pword
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 
 
 #################################################
@@ -36,13 +36,16 @@ app = Flask(__name__)
 # Flask Routes
 #################################################
 
-# @app.route("/")
-# def home():
-#     return ()
+@app.route("/")
+def home():
+    return render_template("index.html")
 
+@app.route("/api/env_impact")
+def home():
+    return render_template("env.html")
 
 # @app.route("/api/env_impact")
-@app.route("/")
+@app.route("/api/env_impact/get_animals")
 def get_env():
     # Create our session (link) from Python to the DB
     # session = Session(env_engine)
