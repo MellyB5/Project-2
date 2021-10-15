@@ -55,7 +55,7 @@ def get_env():
     # session = Session(env_engine)
     # animals = pd.read_sql_table("protected_animals", connection)
     session=Session(env_engine)
-    protected_animals = pd.read_sql_table("test", env_conn)
+    protected_animals = pd.read_sql_table("protected_animals", env_conn)
     animals_json = protected_animals.to_json(orient = "index")
     session.close()
     
