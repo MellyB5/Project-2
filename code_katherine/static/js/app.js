@@ -1,5 +1,8 @@
 //read in data
-d3.json("data/protected_animals.json").then((dataA) => {
+// "/api/env_impact/get_animals"
+// "data/protected_animals.json"
+var url = "/api/env_impact/get_animals"
+d3.json(url).then((dataA) => {
     console.log(dataA);
 
     var numAnimals = Object.keys(dataA).length;
@@ -17,13 +20,13 @@ d3.json("data/protected_animals.json").then((dataA) => {
 
         // choose silhouette to go on card
         var filenameImage = "";
-        if (type === "Bird") { filenameImage = "images/Bird-Silhouette.svg" }
-        else if (type === "Fish") { filenameImage = "images/Fish-Silhouette.svg" }
-        else if (type === "Reptile") { filenameImage = "images/Reptile-Silhouette.svg" }
-        else if (type === "Spider") { filenameImage = "images/Spider-Silhouette.svg" }
-        else if (type === "Frog") { filenameImage = "images/Frog-Silhouette.svg" }
-        else if (type === "Mammal") { filenameImage = "images/Mammal-Silhouette.svg" }
-        else if (type === "Insect") { filenameImage = "images/Insect-Silhouette.svg" };
+        if (type === "Bird") { filenameImage = "static/images/Bird-Silhouette.svg" }
+        else if (type === "Fish") { filenameImage = "static/images/Fish-Silhouette.svg" }
+        else if (type === "Reptile") { filenameImage = "static/images/Reptile-Silhouette.svg" }
+        else if (type === "Spider") { filenameImage = "static/images/Spider-Silhouette.svg" }
+        else if (type === "Frog") { filenameImage = "static/images/Frog-Silhouette.svg" }
+        else if (type === "Mammal") { filenameImage = "static/images/Mammal-Silhouette.svg" }
+        else if (type === "Insect") { filenameImage = "static/images/Insect-Silhouette.svg" };
         //console.log(filenameImage);
 
 
@@ -53,7 +56,7 @@ d3.json("data/protected_animals.json").then((dataA) => {
     }
 
     // initialise page
-    var whichAnimal = 10;
+    var whichAnimal = 5;
     getAnimal(whichAnimal);
     // var test = newAnimal(whichAnimal);
     // console.log(`'test ${test}'`)
