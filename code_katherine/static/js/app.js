@@ -7,10 +7,8 @@ d3.json(url).then((dataA) => {
     
     var numAnimals = Object.keys(dataA).length;
 
-    // var dist1 = 0.1;
-    // var dist2 = 0.3;
-    // var dist3 = 0.5;
-    // var dist5 = 0.8;
+    var bottom = 0;
+    var top = 100;
     
     // function to get the animal data
     function getAnimal(whichAnimal) {
@@ -80,8 +78,22 @@ d3.json(url).then((dataA) => {
             getAnimal(whichAnimal);
             status = getStatus(whichAnimal);
             distribution = getDistribution(whichAnimal);
-            console.log(`this is ${distribution}, ${status}`);
-            
+            if (distribution === '10 to <30%') {
+                bottom = 10;
+                top = 30;
+            }
+            else if (distribution === '30 to <50%') {
+                bottom = 30;
+                top = 50;
+            }
+            else if (distribution === '50 to <80%') {
+                bottom = 50;
+                top = 80;
+            }
+            else  {
+                bottom = 80;
+                top = 100;
+            }
         });
 
     d3.select('#liveAlertBtn')
@@ -93,9 +105,19 @@ d3.json(url).then((dataA) => {
             }
             else {
                 // getStatus
-                var near_enough = sliderFill.value;
+                var near_enough = Math.round(sliderFill.value()*100);
+                console.log(near_enough);
+                var message2 = ""
+                if (near_enough < bottom) {
+                    message2 = "Sadly, it was more like "
+                }
+                else if (near_enough > top) {
+                    message2 = "Actually, it wasn't that bad.  It was more like "
+                }
+                else {
+                    message2 = "You're in the ball park! It was estimated at "}
 
-                message = `"your answer was ${sliderFill.value()} actual is ${distribution}"`;
+                message = `Your answer was ${near_enough}%. ${message2} ${distribution}`;
             };
             console.log(sliderFill.value())
             alertPlaceholder.html(`'<div class="alert alert-info alert-dismissible fade show" role="alert"> ${message} <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'`)
