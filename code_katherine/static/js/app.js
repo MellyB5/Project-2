@@ -4,9 +4,14 @@
 var url = "/api/env_impact/get_animals"
 d3.json(url).then((dataA) => {
     console.log(dataA);
-
+    
     var numAnimals = Object.keys(dataA).length;
 
+    // var dist1 = 0.1;
+    // var dist2 = 0.3;
+    // var dist3 = 0.5;
+    // var dist5 = 0.8;
+    
     // function to get the animal data
     function getAnimal(whichAnimal) {
         //console.log(dataA[whichAnimal]);
@@ -41,18 +46,18 @@ d3.json(url).then((dataA) => {
     function newAnimal() {
         whichAnimal = Math.floor(Math.random() * (numAnimals));
         // console.log(whichAnimal);
-        getAnimal(whichAnimal);
-        return(whichAnimal);
-        }
-
-    function getStatus(dataA, whichAnimal) {
-        status = dataA[whichAnimal].status;
-        return(status)
+        // getAnimal(whichAnimal);
+        return (whichAnimal);
     }
 
-    function getDistribution(dataA, whichAnimal) {
+    function getStatus(whichAnimal) {
+        status = dataA[whichAnimal].status;
+        return (status)
+    }
+
+    function getDistribution(whichAnimal) {
         distribution = dataA[whichAnimal].distribution;
-        return(distribution)
+        return (distribution)
     }
 
     // initialise page
@@ -60,35 +65,42 @@ d3.json(url).then((dataA) => {
     getAnimal(whichAnimal);
     // var test = newAnimal(whichAnimal);
     // console.log(`'test ${test}'`)
-    var status = getStatus(dataA, whichAnimal);
+    var status = getStatus(whichAnimal);
     console.log(status);
-    var distribution = getDistribution(dataA, whichAnimal);
+    var distribution = getDistribution(whichAnimal);
 
     // // start over on button click
     // d3.select("#choose-animal")
     //     .on("click", newAnimal);
 
-            // start over on button click
+    // start over on button click
     d3.select("#choose-animal")
-    .on("click", function(){
-        test=newAnimal(whichAnimal);
-        console.log(`'test ${test}'`)
-    });
+        .on("click", function () {
+            whichAnimal = newAnimal();
+            getAnimal(whichAnimal);
+            status = getStatus(whichAnimal);
+            distribution = getDistribution(whichAnimal);
+            console.log(`this is ${distribution}, ${status}`);
+            
+        });
 
     d3.select('#liveAlertBtn')
-    .on("click", function(){
-        var alertPlaceholder = d3.select('#liveAlertPlaceholder');
-        var message = "";
-        if (sliderFill.value() === 0){
-            message = "oh, but you haven't guessed yet";
-        }
-        else {
-            // getStatus
-            message =`"your answer was ${sliderFill.value()} actual is ${distribution}"`;} ;
-        console.log(sliderFill.value())
-        alertPlaceholder.html(`'<div class="alert alert-info alert-dismissible fade show" role="alert"> ${message} <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'`)
+        .on("click", function () {
+            var alertPlaceholder = d3.select('#liveAlertPlaceholder');
+            var message = "";
+            if (sliderFill.value() === 0) {
+                message = "oh, but you haven't guessed yet";
+            }
+            else {
+                // getStatus
+                var near_enough = sliderFill.value;
 
-    })
+                message = `"your answer was ${sliderFill.value()} actual is ${distribution}"`;
+            };
+            console.log(sliderFill.value())
+            alertPlaceholder.html(`'<div class="alert alert-info alert-dismissible fade show" role="alert"> ${message} <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'`)
+
+        })
 
 
 

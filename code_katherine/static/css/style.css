@@ -1,37 +1,39 @@
-.iframeContainer {
-  padding: 20px;
-  border: 1px solid #e3e3e3;
-}
-
-/* Sticky Footer rules (https://getbootstrap.com/examples/sticky-footer/) */
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  /* Padding bottom by footer height */
-  padding-bottom: 80px;
-}
-
-#footer {
+.display-3{
   position: absolute;
-  bottom: 0;
-  width: 100%; /* Set the fixed height of the footer here */
-  height: 10px;
-  padding-top: 20px;
-  padding-bottom: 40px;
-  text-align: center;
-  background-color: #f5f5f5;
+  left:35%;
+  top: 1%;
+  color:rgb(0, 0, 0);
+  font-weight:normal;
+  font-size: 200%;
 }
+#myCarousel{
+  top: 45%;
+}
+/* .jumbotron {
+  background-image: "{{url_for('static', filename='images/bushfire1.jpeg')}}";
+  height: 20px;
+} */
 
-#footer p {
+.navbar_ul {
+  list-style-type: none;
   margin: 0;
-  font-size: 16px;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(155, 84, 67);
+  }
+
+.navbar_li {
+  float: left;
 }
 
-#image-silhouette {
-  width: 100px;
-  height: 100px;
-  fill:aquamarine;
+.navbar_li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar_li a:hover {
+  background-color: #111;
 }

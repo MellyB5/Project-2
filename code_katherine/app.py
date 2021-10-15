@@ -36,13 +36,17 @@ app = Flask(__name__)
 # Flask Routes
 #################################################
 
+# @app.route("/")
+# def home():
+#     return render_template("index.html")
+
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("env.html")    
 
-@app.route("/api/env_impact")
-def home():
-    return render_template("env.html")
+# @app.route("/api/env_impact")
+# def home():
+#     return render_template("env.html")
 
 # @app.route("/api/env_impact")
 @app.route("/api/env_impact/get_animals")
@@ -51,7 +55,7 @@ def get_env():
     # session = Session(env_engine)
     # animals = pd.read_sql_table("protected_animals", connection)
     session=Session(env_engine)
-    protected_animals = pd.read_sql_table("protected_animals", env_conn)
+    protected_animals = pd.read_sql_table("test", env_conn)
     animals_json = protected_animals.to_json(orient = "index")
     session.close()
     
