@@ -8,6 +8,7 @@ d3.json(url).then((dataA) => {
 
     var bottom = 0;
     var top = 100;
+    // var near_enough = 1000; //dummy value to test if animal has been chosen yet
     
     // function to get the animal data
     function getAnimal(whichAnimal) {
@@ -59,16 +60,30 @@ d3.json(url).then((dataA) => {
 
     // initialise page
     var whichAnimal = 5;
+    newAnimal();
     getAnimal(whichAnimal);
     // var test = newAnimal(whichAnimal);
     // console.log(`'test ${test}'`)
     var status = getStatus(whichAnimal);
     console.log(status);
     var distribution = getDistribution(whichAnimal);
+    if (distribution === '10 to <30%') {
+        bottom = 10;
+        top = 30;
+    }
+    else if (distribution === '30 to <50%') {
+        bottom = 30;
+        top = 50;
+    }
+    else if (distribution === '50 to <80%') {
+        bottom = 50;
+        top = 80;
+    }
+    else  {
+        bottom = 80;
+        top = 100;
+    }
 
-    // // start over on button click
-    // d3.select("#choose-animal")
-    //     .on("click", newAnimal);
 
     // start over on button click
     d3.select("#choose-animal")
@@ -93,6 +108,8 @@ d3.json(url).then((dataA) => {
                 bottom = 80;
                 top = 100;
             }
+            d3.select('#answer-alert')
+            .remove();
         });
 
     d3.select('#liveAlertBtn')
@@ -102,9 +119,9 @@ d3.json(url).then((dataA) => {
             if (sliderFill.value() === 0) {
                 message = "oh, but you haven't guessed yet";
             }
-            else {
-                // getStatus
-                var near_enough = Math.round(sliderFill.value()*100);
+           else {
+                // compare message to distribution and choose appropriate response
+                near_enough = Math.round(sliderFill.value()*100);
                 console.log(near_enough);
                 var message2 = ""
                 if (near_enough < bottom) {
@@ -119,16 +136,13 @@ d3.json(url).then((dataA) => {
                 message = `Your answer was ${near_enough}%. ${message2} ${distribution}`;
             };
             console.log(sliderFill.value())
-            alertPlaceholder.html(`'<div class="alert alert-info alert-dismissible fade show" role="alert"> ${message} <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'`)
+            alertPlaceholder.html(`<div class="alert alert-info alert-dismissible fade show" role="alert" id="answer-alert"> ${message} <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" ></button></div>`)
 
         })
 
 
 
     var data = [0, 1];
-
-    // Fill
-    // var flame = d3.select("#flame");
 
     var sliderFill = d3
         .sliderBottom()
@@ -141,12 +155,9 @@ d3.json(url).then((dataA) => {
         .fill('#a52a2a')
         .on('onchange', val => {
             d3.select('p#value-fill').text(d3.format(',.0%')(val));
-            // // alert
-            // var alertPlaceholder = d3.select('#liveAlertPlaceholder')
-            // // var alertTrigger = d3.select('#liveAlertBtn')
-            // var message = `"your answer was ${val} actual is "`;
-            // alertPlaceholder.html(`'<div class="alert alert-info alert-dismissible fade show" role="alert"> ${message} <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'`)
-        });
+            d3.select('#answer-alert')
+            .remove();
+            });
 
     var gFill = d3
         .select('div#slider-fill')
@@ -160,128 +171,128 @@ d3.json(url).then((dataA) => {
 
     d3.select('p#value-fill').text(d3.format(',.0%')(sliderFill.value()));
 
-    flame
-        .append('svg')
-        .attr('width', 600)
-        .attr('height', 400)
-        .append('g')
-        .attr('transform', 'translate(30,30)');
+    // flame
+    //     .append('svg')
+    //     .attr('width', 600)
+    //     .attr('height', 400)
+    //     .append('g')
+    //     .attr('transform', 'translate(30,30)');
 
-    var box = flame
-        .append('rect')
-        .attr('width', 100)
-        .attr('height', 100)
-        .attr('transform', 'translate(400,0)')
-        .attr('fill', "pink");
+    // var box = flame
+    //     .append('rect')
+    //     .attr('width', 100)
+    //     .attr('height', 100)
+    //     .attr('transform', 'translate(400,0)')
+    //     .attr('fill', "pink");
 
 
 
     // Color picker
-    var num2hex = rgb => {
-        return rgb
-            .map(color => {
-                let str = color.toString(16);
+    // var num2hex = rgb => {
+    //     return rgb
+    //         .map(color => {
+    //             let str = color.toString(16);
 
-                if (str.length === 1) {
-                    str = '0' + str;
-                }
+    //             if (str.length === 1) {
+    //                 str = '0' + str;
+    //             }
 
-                return str;
-            })
-            .join('');
-    };
+    //             return str;
+    //         })
+    //         .join('');
+    // };
 
-    var rgb = [100, 0, 0];
-    var colors = ['red', 'green', 'blue'];
+    // var rgb = [100, 0, 0];
+    // var colors = ['red', 'green', 'blue'];
 
-    var gColorPicker = d3
-        .select('div#slider-color-picker')
-        .append('svg')
-        .attr('width', 600)
-        .attr('height', 400)
-        .append('g')
-        .attr('transform', 'translate(30,30)');
+    // var gColorPicker = d3
+    //     .select('div#slider-color-picker')
+    //     .append('svg')
+    //     .attr('width', 600)
+    //     .attr('height', 400)
+    //     .append('g')
+    //     .attr('transform', 'translate(30,30)');
 
-    var box = gColorPicker
-        .append('rect')
-        .attr('width', 100)
-        .attr('height', 100)
-        .attr('transform', 'translate(400,0)')
-        .attr('fill', `#${num2hex(rgb)}`);
+    // var box = gColorPicker
+    //     .append('rect')
+    //     .attr('width', 100)
+    //     .attr('height', 100)
+    //     .attr('transform', 'translate(400,0)')
+    //     .attr('fill', `#${num2hex(rgb)}`);
 
-    rgb.forEach((color, i) => {
-        var slider = d3
-            .sliderBottom()
-            .min(0)
-            .max(255)
-            .step(1)
-            .width(300)
-            .default(rgb[i])
-            .displayValue(false)
-            .fill(colors[i])
-            .on('onchange', num => {
-                rgb[i] = num;
-                box.attr('fill', `#${num2hex(rgb)}`);
-                d3.select('p#value-color-picker').text(`#${num2hex(rgb)}`);
-            });
+    // rgb.forEach((color, i) => {
+    //     var slider = d3
+    //         .sliderBottom()
+    //         .min(0)
+    //         .max(255)
+    //         .step(1)
+    //         .width(300)
+    //         .default(rgb[i])
+    //         .displayValue(false)
+    //         .fill(colors[i])
+    //         .on('onchange', num => {
+    //             rgb[i] = num;
+    //             box.attr('fill', `#${num2hex(rgb)}`);
+    //             d3.select('p#value-color-picker').text(`#${num2hex(rgb)}`);
+    //         });
 
-        gColorPicker
-            .append('g')
-            .attr('transform', `translate(30,${60 * i})`)
-            .call(slider);
-    });
+    //     gColorPicker
+    //         .append('g')
+    //         .attr('transform', `translate(30,${60 * i})`)
+    //         .call(slider);
+    // });
 
-    d3.select('p#value-color-picker').text(`#${num2hex(rgb)}`);
+    // d3.select('p#value-color-picker').text(`#${num2hex(rgb)}`);
 
-    // blob
-    var blob = document.getElementById('blob');
-    var colorSlider = document.getElementById('slider-colour-picker');
-    var num2hex = rgb => {
-        return rgb
-            .map(color => {
-                let str = color.toString(16);
-                if (str.length === 1) {
-                    str = '0' + str;
-                }
-                return str;
-            })
-            .join('');
-    };
-    var rgb = [100, 0, 0];
-    var colors = ['red', 'green', 'blue'];
+    // // blob
+    // var blob = document.getElementById('blob');
+    // var colorSlider = document.getElementById('slider-colour-picker');
+    // var num2hex = rgb => {
+    //     return rgb
+    //         .map(color => {
+    //             let str = color.toString(16);
+    //             if (str.length === 1) {
+    //                 str = '0' + str;
+    //             }
+    //             return str;
+    //         })
+    //         .join('');
+    // };
+    // var rgb = [100, 0, 0];
+    // var colors = ['red', 'green', 'blue'];
 
-    var gColorPicker = d3
-        .select('div#slider-colour-picker')
-        .append('svg')
-        .attr('width', 375)
-        .attr('height', 200)
-        .append('g')
-        .attr('transform', 'translate(30,30)');
+    // var gColorPicker = d3
+    //     .select('div#slider-colour-picker')
+    //     .append('svg')
+    //     .attr('width', 375)
+    //     .attr('height', 200)
+    //     .append('g')
+    //     .attr('transform', 'translate(30,30)');
 
-    rgb.forEach((color, i) => {
-        var slider = d3
-            .sliderBottom()
-            .min(0)
-            .max(255)
-            .step(1)
-            .width(300)
-            .ticks(0)
-            .default(rgb[i])
-            .displayValue(false)
-            .fill(colors[i])
-            .handle(
-                d3
-                    .symbol()
-                    .type(d3.symbolCircle)
-                    .size(200)()
-            )
-            .on('onchange', num => {
-                rgb[i] = num;
-                blob.style.fill = `#${num2hex(rgb)}`;
-            });
-        gColorPicker
-            .append('g')
-            .attr('transform', `translate(30,${60 * i})`)
-            .call(slider);
-    });
+    // rgb.forEach((color, i) => {
+    //     var slider = d3
+    //         .sliderBottom()
+    //         .min(0)
+    //         .max(255)
+    //         .step(1)
+    //         .width(300)
+    //         .ticks(0)
+    //         .default(rgb[i])
+    //         .displayValue(false)
+    //         .fill(colors[i])
+    //         .handle(
+    //             d3
+    //                 .symbol()
+    //                 .type(d3.symbolCircle)
+    //                 .size(200)()
+    //         )
+    //         .on('onchange', num => {
+    //             rgb[i] = num;
+    //             blob.style.fill = `#${num2hex(rgb)}`;
+    //         });
+    //     gColorPicker
+    //         .append('g')
+    //         .attr('transform', `translate(30,${60 * i})`)
+    //         .call(slider);
+    // });
 })
