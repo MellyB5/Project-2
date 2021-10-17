@@ -41,16 +41,16 @@
         </div>
       </div> -->
       <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-4">
           <div class="well">
-            <h5>Health Conditions affecting the lungs</h5>
+            <h5>Inhaler Sales by area</h5>
             <!-- <select id="selDataset" onchange="buildPlot(this.value);"></select> -->
             <select id="selDataset"></select>
           </div>
             <div id="sample-metadata" class="panel-body"></div>
           </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-12">
           <div id="bar"></div>
         </div>
       </div>
@@ -59,7 +59,8 @@
   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script type="module" src="static/health_logic.js"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='health_logic.js')}}"></script>
+    <!-- <script type="module" src="static/health_logic.js"></script> -->
     
     
 
