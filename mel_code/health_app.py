@@ -24,24 +24,24 @@ def health():
     session.close()
     return jsonify(sales_dict)
 
-@app.route("/api/health/2")
-def health2():
-    session = Session(health_engine)
-    lung_data = []
-    breathing = pd.read_sql_table("breathing_abnormalities", connection)
-    breathing_dict = breathing.to_dict(orient="records")
-    lung_data.append(breathing_dict)
-    asthma = pd.read_sql_table("asthma", connection)
-    asthma_dict = asthma.to_dict(orient="records")
-    lung_data.append(asthma_dict)
-    respiratory = pd.read_sql_table("respiratory_disease", connection)
-    respiratory_dict = respiratory.to_dict(orient="records")
-    lung_data.append(respiratory_dict)
-    copd = pd.read_sql_table("copd_exacerbation", connection)
-    copd_dict = copd.to_dict(orient="records")
-    lung_data.append(copd_dict)
-    session.close()
-    return jsonify(lung_data)
+# @app.route("/api/health/2")
+# def health2():
+#     session = Session(health_engine)
+#     lung_data = []
+#     breathing = pd.read_sql_table("breathing_abnormalities", connection)
+#     breathing_dict = breathing.to_dict(orient="records")
+#     lung_data.append(breathing_dict)
+#     asthma = pd.read_sql_table("asthma", connection)
+#     asthma_dict = asthma.to_dict(orient="records")
+#     lung_data.append(asthma_dict)
+#     respiratory = pd.read_sql_table("respiratory_disease", connection)
+#     respiratory_dict = respiratory.to_dict(orient="records")
+#     lung_data.append(respiratory_dict)
+#     copd = pd.read_sql_table("copd_exacerbation", connection)
+#     copd_dict = copd.to_dict(orient="records")
+#     lung_data.append(copd_dict)
+#     session.close()
+#     return jsonify(lung_data)
 
 
 if __name__ == "__main__":

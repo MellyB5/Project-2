@@ -53,11 +53,6 @@ var trace_2 = {
     // console.log(data);
     Plotly.newPlot("bar", [trace_1, trace_2])
 
-
-
-    // var bardata = {
-    
-    // }
 })
 }
 
@@ -69,18 +64,6 @@ function lungPlot(){
     })
 }
 buildPlot();
-// read in data
-// var dropdownSamples = d3.select("#selDataset");
-// console.log(dropdownSamples);
-// const url = "/api/health/2";
-// var hospitalData = [];
-// d3.json(url).then(data => {
-//     hospitalData = data;
-//     data.forEach(element => {
-//         dropdownSamples.append("option").text(element).property("value", element)
-//     });
-//     optionChanged(data.names[0])
-//     console.log(hospitalData);
-// })
+
 
 d3.select('#selDataset').on("change", buildPlot);
