@@ -1,0 +1,39 @@
+.display-3{
+  position: absolute;
+  left:35%;
+  top: 1%;
+  color:rgb(0, 0, 0);
+  font-weight:normal;
+  font-size: 200%;
+}
+#myCarousel{
+  top: 45%;
+}
+/* .jumbotron {
+  background-image: "{{url_for('static', filename='images/bushfire1.jpeg')}}";
+  height: 20px;
+} */
+
+.navbar_ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(155, 84, 67);
+  }
+
+.navbar_li {
+  float: left;
+}
+
+.navbar_li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar_li a:hover {
+  background-color: #111;
+}
