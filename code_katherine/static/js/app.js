@@ -1,12 +1,14 @@
 //read in data
-// "/api/env_impact/get_animals"
 // "data/protected_animals.json"
 var url = "/api/env_impact/get_animals"
 d3.json(url).then((dataA) => {
     console.log(dataA);
-
+    
     var numAnimals = Object.keys(dataA).length;
 
+    var bottom = 0;
+    var top = 100;
+    
     // function to get the animal data
     function getAnimal(whichAnimal) {
         //console.log(dataA[whichAnimal]);
@@ -20,13 +22,13 @@ d3.json(url).then((dataA) => {
 
         // choose silhouette to go on card
         var filenameImage = "";
-        if (type === "Bird") { filenameImage = "static/images/Bird-Silhouette.svg" }
-        else if (type === "Fish") { filenameImage = "static/images/Fish-Silhouette.svg" }
-        else if (type === "Reptile") { filenameImage = "static/images/Reptile-Silhouette.svg" }
-        else if (type === "Spider") { filenameImage = "static/images/Spider-Silhouette.svg" }
-        else if (type === "Frog") { filenameImage = "static/images/Frog-Silhouette.svg" }
-        else if (type === "Mammal") { filenameImage = "static/images/Mammal-Silhouette.svg" }
-        else if (type === "Insect") { filenameImage = "static/images/Insect-Silhouette.svg" };
+        if (type === "Bird") { filenameImage = "static/Images/Bird-Silhouette.svg" }
+        else if (type === "Fish") { filenameImage = "static/Images/Fish-Silhouette.svg" }
+        else if (type === "Reptile") { filenameImage = "static/Images/Reptile-Silhouette.svg" }
+        else if (type === "Spider") { filenameImage = "static/Images/Spider-Silhouette.svg" }
+        else if (type === "Frog") { filenameImage = "static/Images/Frog-Silhouette.svg" }
+        else if (type === "Mammal") { filenameImage = "static/Images/Mammal-Silhouette.svg" }
+        else if (type === "Insect") { filenameImage = "static/Images/Insect-Silhouette.svg" };
         //console.log(filenameImage);
 
 
@@ -41,18 +43,18 @@ d3.json(url).then((dataA) => {
     function newAnimal() {
         whichAnimal = Math.floor(Math.random() * (numAnimals));
         // console.log(whichAnimal);
-        getAnimal(whichAnimal);
-        return(whichAnimal);
-        }
-
-    function getStatus(dataA, whichAnimal) {
-        status = dataA[whichAnimal].status;
-        return(status)
+        // getAnimal(whichAnimal);
+        return (whichAnimal);
     }
 
-    function getDistribution(dataA, whichAnimal) {
+    function getStatus(whichAnimal) {
+        status = dataA[whichAnimal].status;
+        return (status)
+    }
+
+    function getDistribution(whichAnimal) {
         distribution = dataA[whichAnimal].distribution;
-        return(distribution)
+        return (distribution)
     }
 
     // initialise page
@@ -60,42 +62,73 @@ d3.json(url).then((dataA) => {
     getAnimal(whichAnimal);
     // var test = newAnimal(whichAnimal);
     // console.log(`'test ${test}'`)
-    var status = getStatus(dataA, whichAnimal);
+    var status = getStatus(whichAnimal);
     console.log(status);
-    var distribution = getDistribution(dataA, whichAnimal);
+    var distribution = getDistribution(whichAnimal);
 
     // // start over on button click
     // d3.select("#choose-animal")
     //     .on("click", newAnimal);
 
-            // start over on button click
+    // start over on button click
     d3.select("#choose-animal")
-    .on("click", function(){
-        test=newAnimal(whichAnimal);
-        console.log(`'test ${test}'`)
-    });
+        .on("click", function () {
+            whichAnimal = newAnimal();
+            getAnimal(whichAnimal);
+            status = getStatus(whichAnimal);
+            distribution = getDistribution(whichAnimal);
+            if (distribution === '10 to <30%') {
+                bottom = 10;
+                top = 30;
+            }
+            else if (distribution === '30 to <50%') {
+                bottom = 30;
+                top = 50;
+            }
+            else if (distribution === '50 to <80%') {
+                bottom = 50;
+                top = 80;
+            }
+            else  {
+                bottom = 80;
+                top = 100;
+            }
+        });
 
     d3.select('#liveAlertBtn')
-    .on("click", function(){
-        var alertPlaceholder = d3.select('#liveAlertPlaceholder');
-        var message = "";
-        if (sliderFill.value() === 0){
-            message = "oh, but you haven't guessed yet";
-        }
-        else {
-            // getStatus
-            message =`"your answer was ${sliderFill.value()} actual is ${distribution}"`;} ;
-        console.log(sliderFill.value())
-        alertPlaceholder.html(`'<div class="alert alert-info alert-dismissible fade show" role="alert"> ${message} <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'`)
+        .on("click", function () {
+            var alertPlaceholder = d3.select('#liveAlertPlaceholder');
+            var message = "";
+            if (sliderFill.value() === 0) {
+                message = "oh, but you haven't guessed yet";
+            }
+            else {
+                // getStatus
+                var near_enough = Math.round(sliderFill.value()*100);
+                console.log(near_enough);
+                var message2 = ""
+                if (near_enough < bottom) {
+                    message2 = "Sadly, it was more like "
+                }
+                else if (near_enough > top) {
+                    message2 = "Actually, it wasn't that bad.  It was more like "
+                }
+                else {
+                    message2 = "You're in the ball park! It was estimated at "}
 
-    })
+                message = `Your answer was ${near_enough}%. ${message2} ${distribution}`;
+            };
+            console.log(sliderFill.value())
+            alertPlaceholder.html(`'<div class="alert alert-info alert-dismissible fade show" role="alert"> ${message} <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'`)
+
+        })
 
 
 
     var data = [0, 1];
 
     // Fill
-    var flame = d3.select("#flame");
+    // var flame = d3.select("#flame");
 
     var sliderFill = d3
         .sliderBottom()
@@ -105,7 +138,7 @@ d3.json(url).then((dataA) => {
         .tickFormat(d3.format(',.0%'))
         .ticks(5)
         .default(0)
-        .fill('#2196f3')
+        .fill('#a52a2a')
         .on('onchange', val => {
             d3.select('p#value-fill').text(d3.format(',.0%')(val));
             // // alert
