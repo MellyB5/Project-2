@@ -96,6 +96,7 @@ body {
   background-color: #dc968d;
 }
 
+#threatened-status {display: none;}
 
 /* Mobile Rules */
 @media screen and (max-width: 530px) {

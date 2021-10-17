@@ -50,6 +50,7 @@ d3.json(url).then((dataA) => {
 
     function getStatus(whichAnimal) {
         status = dataA[whichAnimal].status;
+        if (status === 0) {status = "migratory"}; // deal with 0 for migratory birds
         return (status)
     }
 
@@ -80,7 +81,8 @@ d3.json(url).then((dataA) => {
     else {
         bottom = 80;
         top = 100;
-    }
+    };
+    
 
 
     // start over on click of button "Find an endangered animal"
@@ -108,6 +110,7 @@ d3.json(url).then((dataA) => {
             }
             d3.select('#answer-alert')
                 .remove();
+            d3.select("#threatened-status").style("display", "none");
         });
 
 
@@ -136,7 +139,12 @@ d3.json(url).then((dataA) => {
                 message = `Your answer was ${near_enough}%. ${message2} ${distribution}`;
             };
             // console.log(sliderFill.value())
-            alertPlaceholder.html(`<div class="alert alert-info alert-dismissible fade show" role="alert" id="answer-alert"> ${message} <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" ></button></div>`)
+            alertPlaceholder.html(`<div class="alert alert-info alert-dismissible fade show" 
+            role="alert" id="answer-alert"> ${message} <button type="button" class="btn-close" 
+            data-bs-dismiss="alert" aria-label="Close" ></button></div>`);
+            d3.select("#threatened-status").style("display", "block");
+            d3.select(".threatButton")
+            .text(status);
         })
 
 
