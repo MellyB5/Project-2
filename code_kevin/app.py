@@ -42,5 +42,8 @@ def bushfire_map():
     # Return bushfire map page
     return render_template("bushfire_map.html")
 
+
 if __name__ == "__main__":
     app.run(debug=True)
+
+
