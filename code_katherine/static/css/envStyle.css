@@ -58,3 +58,25 @@ body {
 .envButton {
   background-color: #32b6c6;
 }
+
+.threatButton {
+  background-color: #dc968d;
+}
+
+
+/* Mobile Rules */
+@media screen and (max-width: 530px) {
+  .stateText {
+    display: none;
+  }
+
+  .aText {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .aText {
+    font-size: 13px;
+  }
+}

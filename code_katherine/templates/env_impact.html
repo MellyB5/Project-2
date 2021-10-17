@@ -43,7 +43,7 @@
           <li class="navbar_li"><a class="active" href="/">Home</a></li>
           <li class="navbar_li"><a href="##">Health Impact</a></li>
           <li class="navbar_li"><a href="/bushfire_map.html">Bushfire Boundaries</a></li>
-          <li class="navbar_li"><a href="##">Environmental Impact - Wildlife</a></li>
+          <li class="navbar_li"><a href="/env_impact.html">Environmental Impact - Wildlife</a></li>
           <li class="navbar_li"><a href="/Volunteer_info/volunteers.html">Volunteer Statistics</a></li>
         </ul>
       </div>
@@ -52,22 +52,9 @@
 
   <div class="container">
 
-    <!-- <div class="col-xs-12  col-md-9">
-      <div class="card text-center">
-        <div class="card-header">
-        </div>
-        <div class="card-body">
-          <h1 class="card-title">Environmental Impact of Bushfires</h1>
-        </div>
-        <div class="card-footer text-muted">
-        </div>
-      </div>
-    </div> -->
+    
     <h1></h1>
-
-
-
-    <div class="row">
+  <div class="row">
       <div class="col-4">
         <div class="container-fluid">
           <div class="text-left">
@@ -77,18 +64,16 @@
           <div class="card text-dark bg-light mb-3">
             <div class="card-body">
               <h5 class="card-title" id="common-name">Common Name</h5>
-              <p class="card-text" id="scientific-name">Scientific Name</p>
+              <p class="card-text fst-italic" id="scientific-name">Scientific Name</p>
             </div>
             <div class="text-center" id="animal-image"><img
-                src="{{url_for('static', filename='images/Spider-Silhouette.svg')}}" class="card-img-top"
+                src="{{url_for('static', filename='Images/Spider-Silhouette.svg')}}" class="card-img-top"
                 id="image-silhouette" alt="animal type silhouette"></div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item" id="animal-type">type</li>
               <li class="list-group-item" id="animal-states">states</li>
             </ul>
-            <div class="card-footer" id="threatened-status">
-              Vulnerability
-            </div>
+            
           </div>
         </div>
       </div>
@@ -112,47 +97,13 @@
         <br>
         <br>
         <div id="threatened-status">
-          <h4>Threatened status:  <span class="badge bg-secondary">Endangered</span></h4>
+          <h4>This animal's threatened status is now:  <span class="badge threatButton">Endangered</span></h4>
         </div>
       </div>
 
     </div>
     
     
-    <h2>Color picker</h2>
-    <div class="row align-items-center">
-      <div class="col-sm-2">
-        <p id="value-color-picker"></p>
-      </div>
-      <div class="col-sm">
-        <div id="slider-color-picker"></div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="row">
-    <div class="col-xs-12  col-md-9">
-      <h2>Blob picker</h2>
-      <div class="row align-items-center">
-        <div class="col-sm-2">
-          <div id="mood">
-            <svg width="200" height="200" viewBox="100 100 600 600" xmlns="http://www.w3.org/2000/svg">
-              <g transform="translate(300,300)">
-                <path id="flame"
-                  d="M134.3,-82C181.6,-47.8,232.7,8.5,224.6,54.2C216.5,99.9,149.2,135.1,86.2,157C23.1,179,-35.7,187.7,-88.9,168.3C-142,149,-189.5,101.5,-205,43.8C-220.5,-13.8,-204.1,-81.7,-164.6,-114.1C-125.1,-146.4,-62.5,-143.2,-9.5,-135.6C43.5,-128,87,-116.1,134.3,-82Z"
-                  fill="#7bdcb5" stroke="none" stroke-width="0"></path>
-              </g>
-            </svg>
-          </div>
-        </div>
-        <div class="col-sm">
-          <div id="slider-colour-picker"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
 
   </div>
   </div>

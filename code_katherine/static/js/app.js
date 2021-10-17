@@ -1,5 +1,4 @@
 //read in data
-// "/api/env_impact/get_animals"
 // "data/protected_animals.json"
 var url = "/api/env_impact/get_animals"
 d3.json(url).then((dataA) => {
@@ -23,13 +22,13 @@ d3.json(url).then((dataA) => {
 
         // choose silhouette to go on card
         var filenameImage = "";
-        if (type === "Bird") { filenameImage = "static/images/Bird-Silhouette.svg" }
-        else if (type === "Fish") { filenameImage = "static/images/Fish-Silhouette.svg" }
-        else if (type === "Reptile") { filenameImage = "static/images/Reptile-Silhouette.svg" }
-        else if (type === "Spider") { filenameImage = "static/images/Spider-Silhouette.svg" }
-        else if (type === "Frog") { filenameImage = "static/images/Frog-Silhouette.svg" }
-        else if (type === "Mammal") { filenameImage = "static/images/Mammal-Silhouette.svg" }
-        else if (type === "Insect") { filenameImage = "static/images/Insect-Silhouette.svg" };
+        if (type === "Bird") { filenameImage = "static/Images/Bird-Silhouette.svg" }
+        else if (type === "Fish") { filenameImage = "static/Images/Fish-Silhouette.svg" }
+        else if (type === "Reptile") { filenameImage = "static/Images/Reptile-Silhouette.svg" }
+        else if (type === "Spider") { filenameImage = "static/Images/Spider-Silhouette.svg" }
+        else if (type === "Frog") { filenameImage = "static/Images/Frog-Silhouette.svg" }
+        else if (type === "Mammal") { filenameImage = "static/Images/Mammal-Silhouette.svg" }
+        else if (type === "Insect") { filenameImage = "static/Images/Insect-Silhouette.svg" };
         //console.log(filenameImage);
 
 
@@ -129,7 +128,7 @@ d3.json(url).then((dataA) => {
     var data = [0, 1];
 
     // Fill
-    var flame = d3.select("#flame");
+    // var flame = d3.select("#flame");
 
     var sliderFill = d3
         .sliderBottom()
@@ -139,7 +138,7 @@ d3.json(url).then((dataA) => {
         .tickFormat(d3.format(',.0%'))
         .ticks(5)
         .default(0)
-        .fill('#2196f3')
+        .fill('#a52a2a')
         .on('onchange', val => {
             d3.select('p#value-fill').text(d3.format(',.0%')(val));
             // // alert
