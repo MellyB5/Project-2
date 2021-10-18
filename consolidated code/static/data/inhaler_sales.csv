@@ -1,0 +1,729 @@
+SA4_code,SA4_name,Week,18_19_n,19_20_n
+101,Capital Region,02-Sep,2630,2622
+101,Capital Region,09-Sep,2427,2521
+101,Capital Region,16-Sep,2547,2586
+101,Capital Region,23-Sep,2599,2540
+101,Capital Region,30-Sep,2416,2713
+101,Capital Region,07-Oct,2332,2397
+101,Capital Region,14-Oct,2385,2579
+101,Capital Region,21-Oct,2576,2535
+101,Capital Region,28-Oct,2730,2609
+101,Capital Region,04-Nov,2547,2485
+101,Capital Region,11-Nov,2534,2808
+101,Capital Region,18-Nov,2678,2939
+101,Capital Region,25-Nov,2465,3073
+101,Capital Region,02-Dec,2514,3067
+101,Capital Region,09-Dec,2513,3642
+101,Capital Region,16-Dec,3032,4319
+101,Capital Region,23-Dec,2665,3760
+101,Capital Region,30-Dec,2478,6211
+101,Capital Region,06-Jan,2320,4107
+101,Capital Region,13-Jan,2213,2751
+101,Capital Region,20-Jan,2140,2525
+101,Capital Region,27-Jan,2247,2641
+101,Capital Region,03-Feb,2233,2301
+101,Capital Region,10-Feb,2504,2192
+101,Capital Region,17-Feb,2318,2279
+101,Capital Region,24-Feb,2415,2527
+102,Central Coast,02-Sep,4645,4856
+102,Central Coast,09-Sep,4451,5015
+102,Central Coast,16-Sep,4358,4826
+102,Central Coast,23-Sep,4482,4805
+102,Central Coast,30-Sep,4341,4726
+102,Central Coast,07-Oct,4222,4534
+102,Central Coast,14-Oct,4291,4794
+102,Central Coast,21-Oct,4431,4546
+102,Central Coast,28-Oct,4427,5333
+102,Central Coast,04-Nov,4669,4978
+102,Central Coast,11-Nov,4646,6375
+102,Central Coast,18-Nov,5300,6247
+102,Central Coast,25-Nov,4697,5366
+102,Central Coast,02-Dec,4823,7088
+102,Central Coast,09-Dec,4855,6537
+102,Central Coast,16-Dec,5526,6560
+102,Central Coast,23-Dec,5004,6077
+102,Central Coast,30-Dec,4468,5628
+102,Central Coast,06-Jan,4161,4590
+102,Central Coast,13-Jan,3941,4447
+102,Central Coast,20-Jan,4119,4061
+102,Central Coast,27-Jan,4088,4043
+102,Central Coast,03-Feb,4193,4087
+102,Central Coast,10-Feb,4459,4095
+102,Central Coast,17-Feb,4333,4013
+102,Central Coast,24-Feb,4320,4731
+103,Central West,02-Sep,2678,2765
+103,Central West,09-Sep,2739,2763
+103,Central West,16-Sep,2676,2693
+103,Central West,23-Sep,2722,2567
+103,Central West,30-Sep,2588,2650
+103,Central West,07-Oct,2481,2373
+103,Central West,14-Oct,2428,2617
+103,Central West,21-Oct,2536,2653
+103,Central West,28-Oct,2645,2701
+103,Central West,04-Nov,2731,2557
+103,Central West,11-Nov,2678,3072
+103,Central West,18-Nov,2790,3460
+103,Central West,25-Nov,2691,2847
+103,Central West,02-Dec,2594,2780
+103,Central West,09-Dec,2863,4418
+103,Central West,16-Dec,3185,4638
+103,Central West,23-Dec,2250,3377
+103,Central West,30-Dec,2167,2893
+103,Central West,06-Jan,2055,2574
+103,Central West,13-Jan,1945,2392
+103,Central West,20-Jan,2070,2381
+103,Central West,27-Jan,1961,2179
+103,Central West,03-Feb,2049,2371
+103,Central West,10-Feb,2145,2286
+103,Central West,17-Feb,2213,2320
+103,Central West,24-Feb,2131,2748
+104,Coffs Harbour - Grafton,02-Sep,1789,1865
+104,Coffs Harbour - Grafton,09-Sep,1790,2063
+104,Coffs Harbour - Grafton,16-Sep,1812,2023
+104,Coffs Harbour - Grafton,23-Sep,1833,1735
+104,Coffs Harbour - Grafton,30-Sep,1760,1787
+104,Coffs Harbour - Grafton,07-Oct,1610,1596
+104,Coffs Harbour - Grafton,14-Oct,1820,1748
+104,Coffs Harbour - Grafton,21-Oct,1728,1769
+104,Coffs Harbour - Grafton,28-Oct,1858,1916
+104,Coffs Harbour - Grafton,04-Nov,1893,2245
+104,Coffs Harbour - Grafton,11-Nov,1757,3788
+104,Coffs Harbour - Grafton,18-Nov,1874,2434
+104,Coffs Harbour - Grafton,25-Nov,1747,2121
+104,Coffs Harbour - Grafton,02-Dec,1623,1947
+104,Coffs Harbour - Grafton,09-Dec,1746,2022
+104,Coffs Harbour - Grafton,16-Dec,1911,2167
+104,Coffs Harbour - Grafton,23-Dec,1694,1829
+104,Coffs Harbour - Grafton,30-Dec,1593,1745
+104,Coffs Harbour - Grafton,06-Jan,1445,1628
+104,Coffs Harbour - Grafton,13-Jan,1283,1498
+104,Coffs Harbour - Grafton,20-Jan,1317,1399
+104,Coffs Harbour - Grafton,27-Jan,1332,1344
+104,Coffs Harbour - Grafton,03-Feb,1334,1405
+104,Coffs Harbour - Grafton,10-Feb,1475,1375
+104,Coffs Harbour - Grafton,17-Feb,1426,1431
+104,Coffs Harbour - Grafton,24-Feb,1598,1598
+105,Far West and Orana,02-Sep,1817,1710
+105,Far West and Orana,09-Sep,1655,1440
+105,Far West and Orana,16-Sep,1753,1598
+105,Far West and Orana,23-Sep,1811,1487
+105,Far West and Orana,30-Sep,1602,1610
+105,Far West and Orana,07-Oct,1596,1377
+105,Far West and Orana,14-Oct,1615,1397
+105,Far West and Orana,21-Oct,1563,1441
+105,Far West and Orana,28-Oct,1654,1533
+105,Far West and Orana,04-Nov,1583,1353
+105,Far West and Orana,11-Nov,1570,1485
+105,Far West and Orana,18-Nov,1716,1714
+105,Far West and Orana,25-Nov,1642,1484
+105,Far West and Orana,02-Dec,1531,1427
+105,Far West and Orana,09-Dec,1735,1696
+105,Far West and Orana,16-Dec,2019,1813
+105,Far West and Orana,23-Dec,1280,1369
+105,Far West and Orana,30-Dec,1246,1275
+105,Far West and Orana,06-Jan,1257,1284
+105,Far West and Orana,13-Jan,1195,1157
+105,Far West and Orana,20-Jan,1340,1186
+105,Far West and Orana,27-Jan,1212,1022
+105,Far West and Orana,03-Feb,1288,1221
+105,Far West and Orana,10-Feb,1371,1157
+105,Far West and Orana,17-Feb,1377,1099
+105,Far West and Orana,24-Feb,1342,1310
+106,Hunter Valley exc Newcastle,02-Sep,3600,3232
+106,Hunter Valley exc Newcastle,09-Sep,3329,3321
+106,Hunter Valley exc Newcastle,16-Sep,3485,3281
+106,Hunter Valley exc Newcastle,23-Sep,3487,3295
+106,Hunter Valley exc Newcastle,30-Sep,3328,3294
+106,Hunter Valley exc Newcastle,07-Oct,3211,3003
+106,Hunter Valley exc Newcastle,14-Oct,3344,3334
+106,Hunter Valley exc Newcastle,21-Oct,3386,3212
+106,Hunter Valley exc Newcastle,28-Oct,3391,3941
+106,Hunter Valley exc Newcastle,04-Nov,3344,3437
+106,Hunter Valley exc Newcastle,11-Nov,3394,4666
+106,Hunter Valley exc Newcastle,18-Nov,3922,3906
+106,Hunter Valley exc Newcastle,25-Nov,3466,3486
+106,Hunter Valley exc Newcastle,02-Dec,3285,4277
+106,Hunter Valley exc Newcastle,09-Dec,3561,3978
+106,Hunter Valley exc Newcastle,16-Dec,4059,4037
+106,Hunter Valley exc Newcastle,23-Dec,3538,3837
+106,Hunter Valley exc Newcastle,30-Dec,3206,3529
+106,Hunter Valley exc Newcastle,06-Jan,2793,3059
+106,Hunter Valley exc Newcastle,13-Jan,2664,2786
+106,Hunter Valley exc Newcastle,20-Jan,2891,2719
+106,Hunter Valley exc Newcastle,27-Jan,2788,2526
+106,Hunter Valley exc Newcastle,03-Feb,2823,2768
+106,Hunter Valley exc Newcastle,10-Feb,3074,2563
+106,Hunter Valley exc Newcastle,17-Feb,2960,2809
+106,Hunter Valley exc Newcastle,24-Feb,2964,3038
+107,Illawarra,02-Sep,3209,3111
+107,Illawarra,09-Sep,2967,2958
+107,Illawarra,16-Sep,3114,3153
+107,Illawarra,23-Sep,3133,3176
+107,Illawarra,30-Sep,3089,3161
+107,Illawarra,07-Oct,2841,2875
+107,Illawarra,14-Oct,2980,3024
+107,Illawarra,21-Oct,3060,2945
+107,Illawarra,28-Oct,3069,3293
+107,Illawarra,04-Nov,3029,3114
+107,Illawarra,11-Nov,3204,3569
+107,Illawarra,18-Nov,3451,3773
+107,Illawarra,25-Nov,3266,3456
+107,Illawarra,02-Dec,3159,3545
+107,Illawarra,09-Dec,3266,4038
+107,Illawarra,16-Dec,3762,4598
+107,Illawarra,23-Dec,3419,4043
+107,Illawarra,30-Dec,3253,4083
+107,Illawarra,06-Jan,2760,3668
+107,Illawarra,13-Jan,2634,3153
+107,Illawarra,20-Jan,2667,2753
+107,Illawarra,27-Jan,2722,2633
+107,Illawarra,03-Feb,2878,2841
+107,Illawarra,10-Feb,3035,2644
+107,Illawarra,17-Feb,3070,2825
+107,Illawarra,24-Feb,2951,3159
+108,Mid North Coast,02-Sep,2766,3097
+108,Mid North Coast,09-Sep,2608,3426
+108,Mid North Coast,16-Sep,2678,3142
+108,Mid North Coast,23-Sep,2807,3160
+108,Mid North Coast,30-Sep,2720,3170
+108,Mid North Coast,07-Oct,2759,3002
+108,Mid North Coast,14-Oct,2712,3062
+108,Mid North Coast,21-Oct,2696,3110
+108,Mid North Coast,28-Oct,2827,3983
+108,Mid North Coast,04-Nov,2600,3866
+108,Mid North Coast,11-Nov,2821,6942
+108,Mid North Coast,18-Nov,2940,4284
+108,Mid North Coast,25-Nov,2836,3359
+108,Mid North Coast,02-Dec,2748,3591
+108,Mid North Coast,09-Dec,2834,3619
+108,Mid North Coast,16-Dec,3237,3788
+108,Mid North Coast,23-Dec,3192,3443
+108,Mid North Coast,30-Dec,2978,3538
+108,Mid North Coast,06-Jan,2545,2844
+108,Mid North Coast,13-Jan,2423,2476
+108,Mid North Coast,20-Jan,2640,2644
+108,Mid North Coast,27-Jan,2573,2259
+108,Mid North Coast,03-Feb,2417,2551
+108,Mid North Coast,10-Feb,2693,2444
+108,Mid North Coast,17-Feb,2749,2635
+108,Mid North Coast,24-Feb,2647,2777
+109,Murray,02-Sep,1439,1451
+109,Murray,09-Sep,1326,1347
+109,Murray,16-Sep,1436,1458
+109,Murray,23-Sep,1501,1490
+109,Murray,30-Sep,1543,1578
+109,Murray,07-Oct,1372,1325
+109,Murray,14-Oct,1434,1489
+109,Murray,21-Oct,1389,1624
+109,Murray,28-Oct,1799,1927
+109,Murray,04-Nov,1503,1662
+109,Murray,11-Nov,1556,1572
+109,Murray,18-Nov,1514,1682
+109,Murray,25-Nov,1491,1453
+109,Murray,02-Dec,1371,1394
+109,Murray,09-Dec,1419,1668
+109,Murray,16-Dec,1729,1852
+109,Murray,23-Dec,1398,1859
+109,Murray,30-Dec,1294,2511
+109,Murray,06-Jan,1100,2666
+109,Murray,13-Jan,1044,1555
+109,Murray,20-Jan,1095,1291
+109,Murray,27-Jan,1049,1204
+109,Murray,03-Feb,1082,1272
+109,Murray,10-Feb,1263,1206
+109,Murray,17-Feb,1143,1233
+109,Murray,24-Feb,1208,1348
+110,New England and North West,02-Sep,2443,2396
+110,New England and North West,09-Sep,2266,2435
+110,New England and North West,16-Sep,2197,2382
+110,New England and North West,23-Sep,2187,2296
+110,New England and North West,30-Sep,2442,2193
+110,New England and North West,07-Oct,2141,2035
+110,New England and North West,14-Oct,1980,1982
+110,New England and North West,21-Oct,2125,2162
+110,New England and North West,28-Oct,2364,2378
+110,New England and North West,04-Nov,1965,2057
+110,New England and North West,11-Nov,1960,2372
+110,New England and North West,18-Nov,2198,2911
+110,New England and North West,25-Nov,2433,2226
+110,New England and North West,02-Dec,2056,2163
+110,New England and North West,09-Dec,2170,2651
+110,New England and North West,16-Dec,2443,2909
+110,New England and North West,23-Dec,1990,2160
+110,New England and North West,30-Dec,2101,2096
+110,New England and North West,06-Jan,1863,2131
+110,New England and North West,13-Jan,1712,1775
+110,New England and North West,20-Jan,1899,1833
+110,New England and North West,27-Jan,2060,1664
+110,New England and North West,03-Feb,1850,1870
+110,New England and North West,10-Feb,2111,1721
+110,New England and North West,17-Feb,2007,1849
+110,New England and North West,24-Feb,2453,2049
+111,Newcastle and Lake Macquarie,02-Sep,4574,4636
+111,Newcastle and Lake Macquarie,09-Sep,4361,4574
+111,Newcastle and Lake Macquarie,16-Sep,4441,4552
+111,Newcastle and Lake Macquarie,23-Sep,4589,4461
+111,Newcastle and Lake Macquarie,30-Sep,4595,4537
+111,Newcastle and Lake Macquarie,07-Oct,4393,4196
+111,Newcastle and Lake Macquarie,14-Oct,4404,4400
+111,Newcastle and Lake Macquarie,21-Oct,4442,4217
+111,Newcastle and Lake Macquarie,28-Oct,4442,5202
+111,Newcastle and Lake Macquarie,04-Nov,4517,4745
+111,Newcastle and Lake Macquarie,11-Nov,4632,6014
+111,Newcastle and Lake Macquarie,18-Nov,5273,5116
+111,Newcastle and Lake Macquarie,25-Nov,4671,4676
+111,Newcastle and Lake Macquarie,02-Dec,4592,6617
+111,Newcastle and Lake Macquarie,09-Dec,4776,5804
+111,Newcastle and Lake Macquarie,16-Dec,5270,5936
+111,Newcastle and Lake Macquarie,23-Dec,4602,5396
+111,Newcastle and Lake Macquarie,30-Dec,4100,4910
+111,Newcastle and Lake Macquarie,06-Jan,3794,4253
+111,Newcastle and Lake Macquarie,13-Jan,3466,3774
+111,Newcastle and Lake Macquarie,20-Jan,3719,3762
+111,Newcastle and Lake Macquarie,27-Jan,3709,3714
+111,Newcastle and Lake Macquarie,03-Feb,4031,3877
+111,Newcastle and Lake Macquarie,10-Feb,3955,3754
+111,Newcastle and Lake Macquarie,17-Feb,4126,3948
+111,Newcastle and Lake Macquarie,24-Feb,4010,4380
+112,Richmond - Tweed,02-Sep,2346,2719
+112,Richmond - Tweed,09-Sep,2314,2889
+112,Richmond - Tweed,16-Sep,2302,2454
+112,Richmond - Tweed,23-Sep,2480,2548
+112,Richmond - Tweed,30-Sep,2573,2452
+112,Richmond - Tweed,07-Oct,2423,2145
+112,Richmond - Tweed,14-Oct,2211,2284
+112,Richmond - Tweed,21-Oct,2274,2243
+112,Richmond - Tweed,28-Oct,2557,2393
+112,Richmond - Tweed,04-Nov,2220,2444
+112,Richmond - Tweed,11-Nov,2200,3361
+112,Richmond - Tweed,18-Nov,2288,2915
+112,Richmond - Tweed,25-Nov,2693,2571
+112,Richmond - Tweed,02-Dec,2271,2672
+112,Richmond - Tweed,09-Dec,2358,2780
+112,Richmond - Tweed,16-Dec,2724,2998
+112,Richmond - Tweed,23-Dec,2543,2658
+112,Richmond - Tweed,30-Dec,2330,2607
+112,Richmond - Tweed,06-Jan,2190,2228
+112,Richmond - Tweed,13-Jan,2008,1995
+112,Richmond - Tweed,20-Jan,1934,1995
+112,Richmond - Tweed,27-Jan,1997,1854
+112,Richmond - Tweed,03-Feb,2084,2004
+112,Richmond - Tweed,10-Feb,2181,1929
+112,Richmond - Tweed,17-Feb,2216,1894
+112,Richmond - Tweed,24-Feb,2306,2316
+113,Riverina,02-Sep,2100,2077
+113,Riverina,09-Sep,2194,1979
+113,Riverina,16-Sep,2255,2075
+113,Riverina,23-Sep,2315,2096
+113,Riverina,30-Sep,2175,2072
+113,Riverina,07-Oct,2000,1873
+113,Riverina,14-Oct,2012,2010
+113,Riverina,21-Oct,2238,2220
+113,Riverina,28-Oct,2452,2222
+113,Riverina,04-Nov,2149,1983
+113,Riverina,11-Nov,2024,2160
+113,Riverina,18-Nov,2150,2464
+113,Riverina,25-Nov,2272,2035
+113,Riverina,02-Dec,2114,1937
+113,Riverina,09-Dec,2236,2299
+113,Riverina,16-Dec,2312,2938
+113,Riverina,23-Dec,1961,2219
+113,Riverina,30-Dec,1849,2604
+113,Riverina,06-Jan,1713,2616
+113,Riverina,13-Jan,1703,1752
+113,Riverina,20-Jan,1796,1602
+113,Riverina,27-Jan,1676,1416
+113,Riverina,03-Feb,1779,1634
+113,Riverina,10-Feb,1914,1568
+113,Riverina,17-Feb,1994,1437
+113,Riverina,24-Feb,1844,1722
+114,Southern Highlands and Shoalhaven,02-Sep,1846,1820
+114,Southern Highlands and Shoalhaven,09-Sep,1807,1636
+114,Southern Highlands and Shoalhaven,16-Sep,1757,1742
+114,Southern Highlands and Shoalhaven,23-Sep,1909,1725
+114,Southern Highlands and Shoalhaven,30-Sep,1866,1841
+114,Southern Highlands and Shoalhaven,07-Oct,1746,1679
+114,Southern Highlands and Shoalhaven,14-Oct,1733,1661
+114,Southern Highlands and Shoalhaven,21-Oct,1801,1714
+114,Southern Highlands and Shoalhaven,28-Oct,1844,1720
+114,Southern Highlands and Shoalhaven,04-Nov,1885,1759
+114,Southern Highlands and Shoalhaven,11-Nov,1735,1960
+114,Southern Highlands and Shoalhaven,18-Nov,2102,1984
+114,Southern Highlands and Shoalhaven,25-Nov,1863,1892
+114,Southern Highlands and Shoalhaven,02-Dec,1999,2110
+114,Southern Highlands and Shoalhaven,09-Dec,2029,2254
+114,Southern Highlands and Shoalhaven,16-Dec,2228,2964
+114,Southern Highlands and Shoalhaven,23-Dec,2065,3203
+114,Southern Highlands and Shoalhaven,30-Dec,1883,3350
+114,Southern Highlands and Shoalhaven,06-Jan,1747,2164
+114,Southern Highlands and Shoalhaven,13-Jan,1597,1782
+114,Southern Highlands and Shoalhaven,20-Jan,1661,1627
+114,Southern Highlands and Shoalhaven,27-Jan,1637,1416
+114,Southern Highlands and Shoalhaven,03-Feb,1653,1557
+114,Southern Highlands and Shoalhaven,10-Feb,1761,1496
+114,Southern Highlands and Shoalhaven,17-Feb,1796,1519
+114,Southern Highlands and Shoalhaven,24-Feb,1765,1673
+115,Sydney - Baulkham Hills and Hawkesbury,02-Sep,1688,1745
+115,Sydney - Baulkham Hills and Hawkesbury,09-Sep,1562,1713
+115,Sydney - Baulkham Hills and Hawkesbury,16-Sep,1643,1625
+115,Sydney - Baulkham Hills and Hawkesbury,23-Sep,1769,1734
+115,Sydney - Baulkham Hills and Hawkesbury,30-Sep,1595,1700
+115,Sydney - Baulkham Hills and Hawkesbury,07-Oct,1555,1430
+115,Sydney - Baulkham Hills and Hawkesbury,14-Oct,1544,1633
+115,Sydney - Baulkham Hills and Hawkesbury,21-Oct,1519,1633
+115,Sydney - Baulkham Hills and Hawkesbury,28-Oct,1721,1742
+115,Sydney - Baulkham Hills and Hawkesbury,04-Nov,1562,1572
+115,Sydney - Baulkham Hills and Hawkesbury,11-Nov,1549,1988
+115,Sydney - Baulkham Hills and Hawkesbury,18-Nov,1815,2454
+115,Sydney - Baulkham Hills and Hawkesbury,25-Nov,1585,1985
+115,Sydney - Baulkham Hills and Hawkesbury,02-Dec,1633,2136
+115,Sydney - Baulkham Hills and Hawkesbury,09-Dec,1618,2405
+115,Sydney - Baulkham Hills and Hawkesbury,16-Dec,1868,2401
+115,Sydney - Baulkham Hills and Hawkesbury,23-Dec,1779,1920
+115,Sydney - Baulkham Hills and Hawkesbury,30-Dec,1585,1858
+115,Sydney - Baulkham Hills and Hawkesbury,06-Jan,1530,1858
+115,Sydney - Baulkham Hills and Hawkesbury,13-Jan,1327,1552
+115,Sydney - Baulkham Hills and Hawkesbury,20-Jan,1348,1472
+115,Sydney - Baulkham Hills and Hawkesbury,27-Jan,1574,1484
+115,Sydney - Baulkham Hills and Hawkesbury,03-Feb,1600,1630
+115,Sydney - Baulkham Hills and Hawkesbury,10-Feb,1618,1488
+115,Sydney - Baulkham Hills and Hawkesbury,17-Feb,1689,1526
+115,Sydney - Baulkham Hills and Hawkesbury,24-Feb,1773,2051
+116,Sydney - Blacktown,02-Sep,3481,3784
+116,Sydney - Blacktown,09-Sep,3420,3842
+116,Sydney - Blacktown,16-Sep,3398,3760
+116,Sydney - Blacktown,23-Sep,3599,3753
+116,Sydney - Blacktown,30-Sep,3196,3761
+116,Sydney - Blacktown,07-Oct,3190,3363
+116,Sydney - Blacktown,14-Oct,3428,3872
+116,Sydney - Blacktown,21-Oct,3274,3619
+116,Sydney - Blacktown,28-Oct,3265,3993
+116,Sydney - Blacktown,04-Nov,3274,3546
+116,Sydney - Blacktown,11-Nov,3561,4589
+116,Sydney - Blacktown,18-Nov,3723,5358
+116,Sydney - Blacktown,25-Nov,3404,3942
+116,Sydney - Blacktown,02-Dec,3260,4472
+116,Sydney - Blacktown,09-Dec,3430,4954
+116,Sydney - Blacktown,16-Dec,3516,4736
+116,Sydney - Blacktown,23-Dec,3051,4269
+116,Sydney - Blacktown,30-Dec,2792,3976
+116,Sydney - Blacktown,06-Jan,2756,3631
+116,Sydney - Blacktown,13-Jan,2462,3270
+116,Sydney - Blacktown,20-Jan,2703,3111
+116,Sydney - Blacktown,27-Jan,2694,3034
+116,Sydney - Blacktown,03-Feb,2980,3205
+116,Sydney - Blacktown,10-Feb,3132,3125
+116,Sydney - Blacktown,17-Feb,3043,3248
+116,Sydney - Blacktown,24-Feb,3118,3747
+117,Sydney - City and Inner South,02-Sep,3542,3663
+117,Sydney - City and Inner South,09-Sep,3783,3719
+117,Sydney - City and Inner South,16-Sep,3890,3540
+117,Sydney - City and Inner South,23-Sep,3779,3733
+117,Sydney - City and Inner South,30-Sep,3451,3697
+117,Sydney - City and Inner South,07-Oct,3347,3344
+117,Sydney - City and Inner South,14-Oct,3657,3562
+117,Sydney - City and Inner South,21-Oct,3420,3578
+117,Sydney - City and Inner South,28-Oct,3760,4132
+117,Sydney - City and Inner South,04-Nov,3540,3602
+117,Sydney - City and Inner South,11-Nov,3618,4583
+117,Sydney - City and Inner South,18-Nov,4373,5949
+117,Sydney - City and Inner South,25-Nov,3757,3933
+117,Sydney - City and Inner South,02-Dec,3652,6450
+117,Sydney - City and Inner South,09-Dec,3898,6078
+117,Sydney - City and Inner South,16-Dec,4017,5179
+117,Sydney - City and Inner South,23-Dec,2971,4229
+117,Sydney - City and Inner South,30-Dec,2906,3982
+117,Sydney - City and Inner South,06-Jan,3178,4295
+117,Sydney - City and Inner South,13-Jan,3176,3587
+117,Sydney - City and Inner South,20-Jan,3323,3460
+117,Sydney - City and Inner South,27-Jan,2952,3170
+117,Sydney - City and Inner South,03-Feb,3199,3450
+117,Sydney - City and Inner South,10-Feb,3793,3334
+117,Sydney - City and Inner South,17-Feb,3642,3257
+117,Sydney - City and Inner South,24-Feb,3495,4347
+118,Sydney - Eastern Suburbs,02-Sep,1762,1768
+118,Sydney - Eastern Suburbs,09-Sep,1782,1814
+118,Sydney - Eastern Suburbs,16-Sep,1767,1784
+118,Sydney - Eastern Suburbs,23-Sep,1800,1818
+118,Sydney - Eastern Suburbs,30-Sep,1709,1752
+118,Sydney - Eastern Suburbs,07-Oct,1536,1586
+118,Sydney - Eastern Suburbs,14-Oct,1657,1672
+118,Sydney - Eastern Suburbs,21-Oct,1665,1668
+118,Sydney - Eastern Suburbs,28-Oct,1695,1962
+118,Sydney - Eastern Suburbs,04-Nov,1759,1816
+118,Sydney - Eastern Suburbs,11-Nov,1736,2109
+118,Sydney - Eastern Suburbs,18-Nov,2097,2511
+118,Sydney - Eastern Suburbs,25-Nov,1722,1819
+118,Sydney - Eastern Suburbs,02-Dec,1799,3020
+118,Sydney - Eastern Suburbs,09-Dec,1928,2845
+118,Sydney - Eastern Suburbs,16-Dec,2095,2511
+118,Sydney - Eastern Suburbs,23-Dec,1745,2085
+118,Sydney - Eastern Suburbs,30-Dec,1718,2090
+118,Sydney - Eastern Suburbs,06-Jan,1531,2528
+118,Sydney - Eastern Suburbs,13-Jan,1458,1745
+118,Sydney - Eastern Suburbs,20-Jan,1450,1599
+118,Sydney - Eastern Suburbs,27-Jan,1508,1634
+118,Sydney - Eastern Suburbs,03-Feb,1702,1673
+118,Sydney - Eastern Suburbs,10-Feb,1657,1557
+118,Sydney - Eastern Suburbs,17-Feb,1704,1626
+118,Sydney - Eastern Suburbs,24-Feb,1828,2357
+119,Sydney - Inner South West,02-Sep,4705,4707
+119,Sydney - Inner South West,09-Sep,4728,4861
+119,Sydney - Inner South West,16-Sep,4772,4519
+119,Sydney - Inner South West,23-Sep,4604,4721
+119,Sydney - Inner South West,30-Sep,5285,4691
+119,Sydney - Inner South West,07-Oct,4531,4303
+119,Sydney - Inner South West,14-Oct,4505,4501
+119,Sydney - Inner South West,21-Oct,4660,4486
+119,Sydney - Inner South West,28-Oct,4579,4810
+119,Sydney - Inner South West,04-Nov,4617,4661
+119,Sydney - Inner South West,11-Nov,4634,5463
+119,Sydney - Inner South West,18-Nov,5357,5937
+119,Sydney - Inner South West,25-Nov,5041,4970
+119,Sydney - Inner South West,02-Dec,4781,7271
+119,Sydney - Inner South West,09-Dec,4800,5952
+119,Sydney - Inner South West,16-Dec,5427,6108
+119,Sydney - Inner South West,23-Dec,4771,5347
+119,Sydney - Inner South West,30-Dec,4138,5436
+119,Sydney - Inner South West,06-Jan,3907,4478
+119,Sydney - Inner South West,13-Jan,3596,4654
+119,Sydney - Inner South West,20-Jan,3831,4705
+119,Sydney - Inner South West,27-Jan,3855,3674
+119,Sydney - Inner South West,03-Feb,4072,4126
+119,Sydney - Inner South West,10-Feb,4259,4208
+119,Sydney - Inner South West,17-Feb,4291,4073
+119,Sydney - Inner South West,24-Feb,4371,4814
+120,Sydney - Inner West,02-Sep,1882,1759
+120,Sydney - Inner West,09-Sep,1824,1891
+120,Sydney - Inner West,16-Sep,1886,1727
+120,Sydney - Inner West,23-Sep,1928,1891
+120,Sydney - Inner West,30-Sep,1685,1810
+120,Sydney - Inner West,07-Oct,1665,1587
+120,Sydney - Inner West,14-Oct,1823,1739
+120,Sydney - Inner West,21-Oct,1852,1668
+120,Sydney - Inner West,28-Oct,1793,2025
+120,Sydney - Inner West,04-Nov,1799,1778
+120,Sydney - Inner West,11-Nov,1882,2130
+120,Sydney - Inner West,18-Nov,2154,2264
+120,Sydney - Inner West,25-Nov,1883,1950
+120,Sydney - Inner West,02-Dec,1895,2893
+120,Sydney - Inner West,09-Dec,2030,2561
+120,Sydney - Inner West,16-Dec,2220,2421
+120,Sydney - Inner West,23-Dec,1821,2383
+120,Sydney - Inner West,30-Dec,1635,2031
+120,Sydney - Inner West,06-Jan,1606,1956
+120,Sydney - Inner West,13-Jan,1513,1704
+120,Sydney - Inner West,20-Jan,1619,1599
+120,Sydney - Inner West,27-Jan,1669,1562
+120,Sydney - Inner West,03-Feb,1666,1647
+120,Sydney - Inner West,10-Feb,1741,1626
+120,Sydney - Inner West,17-Feb,1743,1615
+120,Sydney - Inner West,24-Feb,1791,2116
+121,Sydney - North Sydney and Hornsby,02-Sep,2606,2631
+121,Sydney - North Sydney and Hornsby,09-Sep,2544,2762
+121,Sydney - North Sydney and Hornsby,16-Sep,2589,2617
+121,Sydney - North Sydney and Hornsby,23-Sep,2695,2822
+121,Sydney - North Sydney and Hornsby,30-Sep,2436,2577
+121,Sydney - North Sydney and Hornsby,07-Oct,2330,2410
+121,Sydney - North Sydney and Hornsby,14-Oct,2355,2556
+121,Sydney - North Sydney and Hornsby,21-Oct,2438,2546
+121,Sydney - North Sydney and Hornsby,28-Oct,2493,2966
+121,Sydney - North Sydney and Hornsby,04-Nov,2552,2697
+121,Sydney - North Sydney and Hornsby,11-Nov,2657,3524
+121,Sydney - North Sydney and Hornsby,18-Nov,3078,3901
+121,Sydney - North Sydney and Hornsby,25-Nov,2692,3101
+121,Sydney - North Sydney and Hornsby,02-Dec,2722,3885
+121,Sydney - North Sydney and Hornsby,09-Dec,2615,4324
+121,Sydney - North Sydney and Hornsby,16-Dec,2987,3982
+121,Sydney - North Sydney and Hornsby,23-Dec,2560,3172
+121,Sydney - North Sydney and Hornsby,30-Dec,2351,2975
+121,Sydney - North Sydney and Hornsby,06-Jan,2454,2986
+121,Sydney - North Sydney and Hornsby,13-Jan,2267,2598
+121,Sydney - North Sydney and Hornsby,20-Jan,2194,2355
+121,Sydney - North Sydney and Hornsby,27-Jan,2571,2530
+121,Sydney - North Sydney and Hornsby,03-Feb,2526,2501
+121,Sydney - North Sydney and Hornsby,10-Feb,2569,2513
+121,Sydney - North Sydney and Hornsby,17-Feb,2660,2399
+121,Sydney - North Sydney and Hornsby,24-Feb,2676,3909
+122,Sydney - Northern Beaches,02-Sep,1723,1695
+122,Sydney - Northern Beaches,09-Sep,1645,1592
+122,Sydney - Northern Beaches,16-Sep,1778,1638
+122,Sydney - Northern Beaches,23-Sep,1705,1578
+122,Sydney - Northern Beaches,30-Sep,1580,1493
+122,Sydney - Northern Beaches,07-Oct,1448,1401
+122,Sydney - Northern Beaches,14-Oct,1542,1443
+122,Sydney - Northern Beaches,21-Oct,1606,1463
+122,Sydney - Northern Beaches,28-Oct,1647,1818
+122,Sydney - Northern Beaches,04-Nov,1636,1673
+122,Sydney - Northern Beaches,11-Nov,1662,1966
+122,Sydney - Northern Beaches,18-Nov,1874,2178
+122,Sydney - Northern Beaches,25-Nov,1787,1595
+122,Sydney - Northern Beaches,02-Dec,1681,2126
+122,Sydney - Northern Beaches,09-Dec,1733,2464
+122,Sydney - Northern Beaches,16-Dec,1943,2180
+122,Sydney - Northern Beaches,23-Dec,1646,1946
+122,Sydney - Northern Beaches,30-Dec,1624,1764
+122,Sydney - Northern Beaches,06-Jan,1495,1883
+122,Sydney - Northern Beaches,13-Jan,1364,1583
+122,Sydney - Northern Beaches,20-Jan,1440,1493
+122,Sydney - Northern Beaches,27-Jan,1558,1373
+122,Sydney - Northern Beaches,03-Feb,1526,1517
+122,Sydney - Northern Beaches,10-Feb,1633,1446
+122,Sydney - Northern Beaches,17-Feb,1571,1404
+122,Sydney - Northern Beaches,24-Feb,1765,1829
+123,Sydney - Outer South West,02-Sep,3277,3538
+123,Sydney - Outer South West,09-Sep,3055,3415
+123,Sydney - Outer South West,16-Sep,3242,3450
+123,Sydney - Outer South West,23-Sep,3194,3333
+123,Sydney - Outer South West,30-Sep,3202,3475
+123,Sydney - Outer South West,07-Oct,2951,3054
+123,Sydney - Outer South West,14-Oct,3012,3076
+123,Sydney - Outer South West,21-Oct,3086,3253
+123,Sydney - Outer South West,28-Oct,3150,3686
+123,Sydney - Outer South West,04-Nov,3046,3435
+123,Sydney - Outer South West,11-Nov,3227,4083
+123,Sydney - Outer South West,18-Nov,3518,4240
+123,Sydney - Outer South West,25-Nov,3534,3422
+123,Sydney - Outer South West,02-Dec,3094,6135
+123,Sydney - Outer South West,09-Dec,3855,4528
+123,Sydney - Outer South West,16-Dec,3938,4920
+123,Sydney - Outer South West,23-Dec,3472,4258
+123,Sydney - Outer South West,30-Dec,3176,3583
+123,Sydney - Outer South West,06-Jan,3778,4291
+123,Sydney - Outer South West,13-Jan,3035,2934
+123,Sydney - Outer South West,20-Jan,2728,2837
+123,Sydney - Outer South West,27-Jan,2887,2625
+123,Sydney - Outer South West,03-Feb,2900,2882
+123,Sydney - Outer South West,10-Feb,2982,2749
+123,Sydney - Outer South West,17-Feb,3136,2809
+123,Sydney - Outer South West,24-Feb,3105,3144
+124,Sydney - Outer West and Blue Mountains,02-Sep,3623,3725
+124,Sydney - Outer West and Blue Mountains,09-Sep,3529,3802
+124,Sydney - Outer West and Blue Mountains,16-Sep,3660,3731
+124,Sydney - Outer West and Blue Mountains,23-Sep,3608,3585
+124,Sydney - Outer West and Blue Mountains,30-Sep,3347,3629
+124,Sydney - Outer West and Blue Mountains,07-Oct,3335,3372
+124,Sydney - Outer West and Blue Mountains,14-Oct,3575,3513
+124,Sydney - Outer West and Blue Mountains,21-Oct,3590,3394
+124,Sydney - Outer West and Blue Mountains,28-Oct,3455,3740
+124,Sydney - Outer West and Blue Mountains,04-Nov,3361,3488
+124,Sydney - Outer West and Blue Mountains,11-Nov,3572,4703
+124,Sydney - Outer West and Blue Mountains,18-Nov,4172,5199
+124,Sydney - Outer West and Blue Mountains,25-Nov,3655,3642
+124,Sydney - Outer West and Blue Mountains,02-Dec,3634,4786
+124,Sydney - Outer West and Blue Mountains,09-Dec,3677,5540
+124,Sydney - Outer West and Blue Mountains,16-Dec,4314,5231
+124,Sydney - Outer West and Blue Mountains,23-Dec,3824,4562
+124,Sydney - Outer West and Blue Mountains,30-Dec,3315,4348
+124,Sydney - Outer West and Blue Mountains,06-Jan,3143,3762
+124,Sydney - Outer West and Blue Mountains,13-Jan,3094,3370
+124,Sydney - Outer West and Blue Mountains,20-Jan,3160,3198
+124,Sydney - Outer West and Blue Mountains,27-Jan,3103,3044
+124,Sydney - Outer West and Blue Mountains,03-Feb,3244,3300
+124,Sydney - Outer West and Blue Mountains,10-Feb,3414,3108
+124,Sydney - Outer West and Blue Mountains,17-Feb,3666,3366
+124,Sydney - Outer West and Blue Mountains,24-Feb,3487,3686
+125,Sydney - Parramatta,02-Sep,2928,3274
+125,Sydney - Parramatta,09-Sep,2950,3354
+125,Sydney - Parramatta,16-Sep,2971,3373
+125,Sydney - Parramatta,23-Sep,3103,3194
+125,Sydney - Parramatta,30-Sep,2735,3210
+125,Sydney - Parramatta,07-Oct,2800,2934
+125,Sydney - Parramatta,14-Oct,2784,3074
+125,Sydney - Parramatta,21-Oct,2901,3048
+125,Sydney - Parramatta,28-Oct,3094,3513
+125,Sydney - Parramatta,04-Nov,2990,3069
+125,Sydney - Parramatta,11-Nov,3025,3772
+125,Sydney - Parramatta,18-Nov,3361,4573
+125,Sydney - Parramatta,25-Nov,3133,3374
+125,Sydney - Parramatta,02-Dec,2974,4416
+125,Sydney - Parramatta,09-Dec,3048,4244
+125,Sydney - Parramatta,16-Dec,3432,4451
+125,Sydney - Parramatta,23-Dec,2813,3734
+125,Sydney - Parramatta,30-Dec,2561,3253
+125,Sydney - Parramatta,06-Jan,2502,2943
+125,Sydney - Parramatta,13-Jan,2295,2656
+125,Sydney - Parramatta,20-Jan,2316,2664
+125,Sydney - Parramatta,27-Jan,2478,2665
+125,Sydney - Parramatta,03-Feb,2560,2601
+125,Sydney - Parramatta,10-Feb,2921,2825
+125,Sydney - Parramatta,17-Feb,2935,2811
+125,Sydney - Parramatta,24-Feb,2891,3296
+126,Sydney - Ryde,02-Sep,1225,1231
+126,Sydney - Ryde,09-Sep,1207,1179
+126,Sydney - Ryde,16-Sep,1176,1182
+126,Sydney - Ryde,23-Sep,1285,1240
+126,Sydney - Ryde,30-Sep,1094,1116
+126,Sydney - Ryde,07-Oct,1065,1024
+126,Sydney - Ryde,14-Oct,1087,1072
+126,Sydney - Ryde,21-Oct,1113,1041
+126,Sydney - Ryde,28-Oct,1169,1302
+126,Sydney - Ryde,04-Nov,1115,1144
+126,Sydney - Ryde,11-Nov,1197,1393
+126,Sydney - Ryde,18-Nov,1377,1496
+126,Sydney - Ryde,25-Nov,1210,1325
+126,Sydney - Ryde,02-Dec,1253,1676
+126,Sydney - Ryde,09-Dec,1262,1761
+126,Sydney - Ryde,16-Dec,1413,1584
+126,Sydney - Ryde,23-Dec,1252,1461
+126,Sydney - Ryde,30-Dec,1149,1298
+126,Sydney - Ryde,06-Jan,1304,1126
+126,Sydney - Ryde,13-Jan,1050,1049
+126,Sydney - Ryde,20-Jan,983,960
+126,Sydney - Ryde,27-Jan,1050,1023
+126,Sydney - Ryde,03-Feb,1094,1071
+126,Sydney - Ryde,10-Feb,1117,972
+126,Sydney - Ryde,17-Feb,1169,1018
+126,Sydney - Ryde,24-Feb,1183,1452
+127,Sydney - South West,02-Sep,3656,3905
+127,Sydney - South West,09-Sep,3572,3796
+127,Sydney - South West,16-Sep,3575,3648
+127,Sydney - South West,23-Sep,3595,3670
+127,Sydney - South West,30-Sep,3353,3746
+127,Sydney - South West,07-Oct,3285,3319
+127,Sydney - South West,14-Oct,3496,3711
+127,Sydney - South West,21-Oct,3544,3552
+127,Sydney - South West,28-Oct,3558,4038
+127,Sydney - South West,04-Nov,3587,3713
+127,Sydney - South West,11-Nov,3654,4431
+127,Sydney - South West,18-Nov,3786,4814
+127,Sydney - South West,25-Nov,3670,4078
+127,Sydney - South West,02-Dec,3561,5789
+127,Sydney - South West,09-Dec,3653,5012
+127,Sydney - South West,16-Dec,3913,4928
+127,Sydney - South West,23-Dec,3720,4745
+127,Sydney - South West,30-Dec,3167,4041
+127,Sydney - South West,06-Jan,3101,3698
+127,Sydney - South West,13-Jan,2891,3503
+127,Sydney - South West,20-Jan,3061,3296
+127,Sydney - South West,27-Jan,3123,3213
+127,Sydney - South West,03-Feb,3324,3532
+127,Sydney - South West,10-Feb,3435,3224
+127,Sydney - South West,17-Feb,3477,3336
+127,Sydney - South West,24-Feb,3483,3870
+128,Sydney - Sutherland,02-Sep,1859,1958
+128,Sydney - Sutherland,09-Sep,1826,1942
+128,Sydney - Sutherland,16-Sep,1739,1798
+128,Sydney - Sutherland,23-Sep,1899,1929
+128,Sydney - Sutherland,30-Sep,1718,1886
+128,Sydney - Sutherland,07-Oct,1684,1773
+128,Sydney - Sutherland,14-Oct,1632,1793
+128,Sydney - Sutherland,21-Oct,1742,1836
+128,Sydney - Sutherland,28-Oct,1712,2026
+128,Sydney - Sutherland,04-Nov,1829,1954
+128,Sydney - Sutherland,11-Nov,1783,2361
+128,Sydney - Sutherland,18-Nov,1961,2456
+128,Sydney - Sutherland,25-Nov,1738,2032
+128,Sydney - Sutherland,02-Dec,1780,3397
+128,Sydney - Sutherland,09-Dec,1875,2424
+128,Sydney - Sutherland,16-Dec,2097,2629
+128,Sydney - Sutherland,23-Dec,1692,2611
+128,Sydney - Sutherland,30-Dec,1500,2318
+128,Sydney - Sutherland,06-Jan,1519,1997
+128,Sydney - Sutherland,13-Jan,1387,1785
+128,Sydney - Sutherland,20-Jan,1395,1582
+128,Sydney - Sutherland,27-Jan,1518,1689
+128,Sydney - Sutherland,03-Feb,1592,1736
+128,Sydney - Sutherland,10-Feb,1680,1672
+128,Sydney - Sutherland,17-Feb,1652,1629
+128,Sydney - Sutherland,24-Feb,1584,2068
