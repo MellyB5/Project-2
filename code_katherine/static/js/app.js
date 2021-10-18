@@ -50,7 +50,7 @@ d3.json(url).then((dataA) => {
 
     function getStatus(whichAnimal) {
         status = dataA[whichAnimal].status;
-        if (status === 0) {status = "migratory"}; // deal with 0 for migratory birds
+        if (status === "0") {status = "migratory"}; // deal with 0 for migratory birds
         return (status)
     }
 
