@@ -1,0 +1,11 @@
+.display-3{
+  color:rgb(0, 0, 0);
+  font-weight: bold;
+}
+#myCarousel{
+  top: 45%;
+}
+.jumbotron {
+  background-image: url("Images/bushfire1.jpeg");
+  background-size: cover;
+}
