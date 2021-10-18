@@ -30,11 +30,70 @@
   
   <br>
 
-  <div class="container" id="10years">
+    <!-- Tab links -->
+<div class="tab justify-content-center" width="1800" height="740">
+  <h2>Comparison of Major Fires over the Years</h2>
+  <button class="tablinks" onclick="openFire(event, '10_years')">2019 -> 2020</button>
+  <button class="tablinks" onclick="openFire(event, 'blackSat')">Black Saturday 2009</button>
+  <button class="tablinks" onclick="openFire(event, 'alpine')">Alpine / Canberra 2003</button>
+  <button class="tablinks" onclick="openFire(event, 'ashWed')">Ash Wednesday 1983</button>
+  <button class="tablinks" onclick="openFire(event, 'blackFri')">Black Friday</button>
+</div>
+
+<!-- Tab content -->
+<div id="10_years" class="tabcontent">
+  <h3>2019 -> 2020 Fire Season</h3>
+  <p> States Affected : Australia Wide</p>
+  <p>Total Deaths : 33 people</p>
+  <p>Total Fire Figthers Lost : 9</p>
+  <p>Total Houses Lost : 3094</p>
+  <p>Total Land Burnt : Over 17 Million Hectares</p>
+</div>
+
+<div id="blackSat" class="tabcontent">
+  <h3>Black Saturday 2009</h3>
+  <p> States Affected : Victoria</p>
+  <p>Total Deaths : 173 people</p>
+  <p>Total Fire Figthers Lost : 2</p>
+  <p>Total Houses Lost : 2055</p>
+  <p>Total Land Burnt : Over 400,000 hectares</p>
+</div>
+
+<div id="alpine" class="tabcontent">
+  <h3>Alpine / Canberra 2003</h3>
+  <p> States Affected : NSW, VIC & ACT</p>
+  <p>Total Deaths : 4 people</p>
+  <p>Total Houses Lost : Over 500</p>
+  <p>Total Land Burnt : Over 1.2 million hectares</p>
+</div>
+
+<div id="ashWed" class="tabcontent">
+  <h3>Ash Wednesday 1983</h3>
+  <p> States Affected : VIC & SA</p>
+  <p>Total Deaths : 75 people</p>
+  <p>Total Houses Lost : 2463</p>
+  <p>Total Land Burnt : 418,000 hectares</p>
+</div>
+
+<div id="blackFri" class="tabcontent">
+  <h3>Black Friday</h3>
+  <p> States Affected : Victoria</p>
+  <p>Total Deaths : 71 people</p>
+  <p>Total Houses Lost : Over 1000</p>
+  <p>Total Land Burnt : 1.5 -> 2 million hectares</p>
+</div>
+<br>
+
+<div id="chartContainer1" style="height: 370px; width: 60%; margin-left:20%; display: inline-block;"></div><br>
+
+  <br>
+
+  <div id="chartContainer2" style="height: 370px; width: 60%; margin-left:20%; display: inline-block;"></div>
+
     <script >
       window.onload = function () {
       
-      var chart = new CanvasJS.Chart("chartContainer", {
+      var chart1 = new CanvasJS.Chart("chartContainer1", {
         animationEnabled: true,
         title:{
           text: "Fire Fighting Volunteers Between 2010 - 2020"
@@ -93,8 +152,66 @@
           ]
         }]
       });
-      chart.render();
+
+      chart1.render();
+
+      var chart2 = new CanvasJS.Chart("chartContainer2", {
+      animationEnabled: true,
+      title:{
+        text: "Fire Fighting Volunteers 2019 -> 2020 Season State View"
+      },  
+      axisY: {
+        title: "Number of Volunteers",
+        titleFontColor: "Black",
+        lineColor: "Black",
+        labelFontColor: "Black",
+        tickColor: "Black"
+      },
+      toolTip: {
+        shared: true
+      },
+      legend: {
+        cursor:"pointer",
+        itemclick: toggleDataSeries
+      },
+      data: [{
+        type: "column",
+        name: "Fire Fighters",
+        legendText: "Fire Fighters",
+        showInLegend: true, 
+        dataPoints:[
+          { label: "WA", y: 11810 },
+          { label: "VIC", y: 32679 },
+          { label: "NSW", y: 73272 },
+          { label: "QLD", y: 12650 },
+          { label: "SA", y: 10505 },
+          { label: "NT", y: 268 },
+          { label: "ACT", y: 1234 },
+          { label: "TAS", y: 4164 }
+        ]
+      },
+      {
+        type: "column", 
+        name: "Support Staff",
+        legendText: "Support Staff",
+        axisYType: "secondary",
+        showInLegend: true,
+        dataPoints:[
+          { label: "WA", y: 2398 },
+          { label: "VIC", y: 22030 },
+          { label: "NSW", y: 8315 },
+          { label: "QLD", y: 18454 },
+          { label: "SA", y: 2947 },
+          { label: "NT", y: 0 },
+          { label: "ACT", y: 0 },
+          { label: "TAS", y: 936 },
+        ]
+      }]
+    });
+
       
+      chart2.render();
+
       function toggleDataSeries(e) {
         if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
           e.dataSeries.visible = false;
@@ -107,68 +224,82 @@
       
       }
       </script>
-      </div>
 
   </head>
   <br>
- 
-  <!-- Tab links -->
-<div class="tab justify-content-center" width="1608" height="740">
-  <h2>Comparison of Major Fires over the Years</h2>
-  <button class="tablinks" onclick="openFire(event, '10_years')">2019 -> 2020</button>
-  <button class="tablinks" onclick="openFire(event, 'blackSat')">Black Saturday 2009</button>
-  <button class="tablinks" onclick="openFire(event, 'alpine')">Alpine / Canberra 2003</button>
-  <button class="tablinks" onclick="openFire(event, 'ashWed')">Ash Wednesday 1983</button>
-  <button class="tablinks" onclick="openFire(event, 'blackFri')">Black Friday</button>
-</div>
-
-<!-- Tab content -->
-<div id="10_years" class="tabcontent">
-  <h3>2019 -> 2020 Fire Season</h3>
-  <p> States Affected : Australia Wide</p>
-  <p>Total Deaths : 33 people</p>
-  <p>Total Fire Figthers Lost : 9</p>
-  <p>Total Houses Lost : 3094</p>
-  <p>Total Land Burnt : Over 17 Million Hectares</p>
-</div>
-
-<div id="blackSat" class="tabcontent">
-  <h3>Black Saturday 2009</h3>
-  <p> States Affected : Victoria</p>
-  <p>Total Deaths : 173 people</p>
-  <p>Total Fire Figthers Lost : 2</p>
-  <p>Total Houses Lost : 2055</p>
-  <p>Total Land Burnt : Over 400,000 hectares</p>
-</div>
-
-<div id="alpine" class="tabcontent">
-  <h3>Alpine / Canberra 2003</h3>
-  <p> States Affected : NSW, VIC & ACT</p>
-  <p>Total Deaths : 4 people</p>
-  <p>Total Houses Lost : Over 500</p>
-  <p>Total Land Burnt : Over 1.2 million hectares</p>
-</div>
-
-<div id="ashWed" class="tabcontent">
-  <h3>Ash Wednesday 1983</h3>
-  <p> States Affected : VIC & SA</p>
-  <p>Total Deaths : 75 people</p>
-  <p>Total Houses Lost : 2463</p>
-  <p>Total Land Burnt : 418,000 hectares</p>
-</div>
-
-<div id="blackFri" class="tabcontent">
-  <h3>Black Friday</h3>
-  <p> States Affected : Victoria</p>
-  <p>Total Deaths : 71 people</p>
-  <p>Total Houses Lost : Over 1000</p>
-  <p>Total Land Burnt : 1.5 -> 2 million hectares</p>
-</div>
-<br>
-
+  <br>
+  <h6 style="margin-left: 3%; font-size: 25px; color:white;">Out of the 70 Countries that offered assistance during the 2019 -> 2020 Fire Season, the below were reported as sending resources / assistance</h6>
+  <div class="row" style="margin-left: 10%">
+    <div class="column">
+      <img src="Images/Canada.jpg" alt="Canada" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="Images/denmark.png" alt="Denmark" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="Images/fiji.png" alt="Fiji" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="Images/france.png" alt="France" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="Images/indonesia.png" alt="Indonesia" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="Images/japan.jpg" alt="Japan" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="Images/malaysia.png" alt="Malaysia" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="Images/nauru.png" alt="Nauru" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="Images/NZ.png" alt="New Zealand" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="Images/palau.png" alt="Palau" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="Images/png.png" alt="PNG" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="Images/samoa.png" alt="Samoa" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="Images/saudi.png" alt="Saudi Arabia" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="Images/singapore.png" alt="Singapore" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="Images/soloman_islands.png" alt="Soloman Islands" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="Images/south_africa.png" alt="South Africa" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="Images/south_korea.jpg" alt="South Korea" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="Images/tuvalu.png" alt="Tuvalu" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="Images/UAE.png" alt="UAE" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="Images/UK.png" alt="UK" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="Images/USA.png" alt="USA" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="Images/vanuatu.png" alt="Vanuatu" style="width:100%">
+    </div>
+  </div>  
     <body>
-    <div id="chartContainer" style="height: 370px; width: 60%; text-align:center;"></div>
-    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
   
   
     <script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
