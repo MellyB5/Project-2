@@ -59,6 +59,22 @@ d3.json(url).then((dataA) => {
         return (distribution)
     }
 
+    function threatColour(status) {
+        var threat_colour = "ffb0a0";
+        if(status === "Critically Endangered") 
+        {threat_colour = "#a52a2a"}
+        else if(status === "Endangered") 
+        {threat_colour = "#c4554d"}
+        else if (status === "Vulnerable") 
+        {threat_colour = "#e27d72"}
+        else if (status === "migratory")
+        {threat_colour = "#ffa599"}
+        else {threat_colour = "#ffa599"};
+        console.log("went to color function");
+        console.log(threat_colour);
+        return (threat_colour)
+    }
+
     // initialise page
     var whichAnimal = 5;
     newAnimal();
@@ -145,6 +161,8 @@ d3.json(url).then((dataA) => {
             d3.select("#threatened-status").style("display", "block");
             d3.select(".threatButton")
             .text(status);
+            d3.select(".threatButton")
+            .style("background-color", threatColour(status));
         })
 
 
