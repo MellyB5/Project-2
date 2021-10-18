@@ -1,0 +1,120 @@
+.display-3{
+    position: absolute;
+    left:35%;
+    top: 1%;
+    color:rgb(0, 0, 0);
+    font-weight:normal;
+    font-size: 200%;
+  }
+  .jumbotron {
+    background-image: url("Images/bushfire1.jpeg");
+    height: 20px
+  }
+  .navbar_ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(155, 84, 67);
+    }
+  
+    .navbar_li {
+      float: left;
+    }
+  
+    .navbar_li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+  
+    .navbar_li a:hover {
+      background-color: #111;
+    }
+
+  .chartContainer{
+      text-align: center;
+      width: 50% !important; 
+      margin: auto;
+  }
+
+  canvas{
+    margin: 0 auto;
+    display: inline;
+    }
+  #chartContainer {
+    margin-left: 20%
+}
+
+  .leaflet-tile-pane { opacity: .15; }
+  
+  .leaflet-zoom-animated {
+    width: 900;
+    height: 566;
+  }
+
+  .leaflet-bar {
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -moz-user-select: none;
+    user-select: none;
+    border-radius: 2px;
+    box-shadow: 0 0 4px rgba(0,0,0,.5);
+  }
+  .info {
+    text-align: center;
+    font-weight: bold;
+  }
+  .leaflet-objects-pane {
+    width: 900;
+    height: 566;
+  }
+
+/* Tabs CSS */
+  /* Style the tab */
+.tab {
+  top: 50%;
+  margin: auto;
+  width: 50% !important; 
+  text-align: center;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: white;
+  margin: auto;
+  width: 50% !important; 
+  width: 1608;
+  text-align: center;
+}
+/* End Tab CSS */
