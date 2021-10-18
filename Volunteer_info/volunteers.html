@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: brown;">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head> 
+<body class="text" style="background-color: brown;">
+    <div class="container">
+        <div class="jumbotron text-center" src="Images/bushfire1.jpeg" style="height: 400x; background-position: center; background-size: cover">
+            <h1 class="display-3" style="margin-top: 0px; padding-top: 0px"><b>Bushfires Australia</b></h1>
+        </div>
+    </div>
+  
+
+   <!-- Nav Bar -->
+   <div class="container">
+    <ul class="navbar_ul">
+      <li class="navbar_li"><a class="active" href="./Index.html">Home</a></li>
+      <li class="navbar_li"><a href="##">Health Impact</a></li>
+      <li class="navbar_li"><a href="/bushfire_map.html">Bushfire Boundaries</a></li>
+      <li class="navbar_li"><a href="##">Environmental Impact - Wildlife</a></li>
+      <li class="navbar_li"><a href="/Volunteer_info/volunteers.html">Volunteer Statistics</a></li>
+    </ul>
+  </div>
+  
+  <br>
+
+  <div class="container" id="10years">
+    <script >
+      window.onload = function () {
+      
+      var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        title:{
+          text: "Fire Fighting Volunteers Between 2010 - 2020"
+        },  
+        axisY: {
+          title: "Number of Volunteers",
+          titleFontColor: "Black",
+          lineColor: "Black",
+          labelFontColor: "Black",
+          tickColor: "Black"
+        },
+        toolTip: {
+          shared: true
+        },
+        legend: {
+          cursor:"pointer",
+          itemclick: toggleDataSeries
+        },
+        data: [{
+          type: "column",
+          name: "Fire Fighters",
+          legendText: "Fire Fighters",
+          showInLegend: true, 
+          dataPoints:[
+            { label: "2010", y: 169766 },
+            { label: "2011", y: 172492 },
+            { label: "2012", y: 164816 },
+            { label: "2013", y: 173017 },
+            { label: "2014", y: 162116 },
+            { label: "2015", y: 164589 },
+            { label: "2016", y: 166310 },
+            { label: "2017", y: 152872 },
+            { label: "2018", y: 156319 },
+            { label: "2019", y: 152798 },
+            { label: "2020", y: 146582 }
+          ]
+        },
+        {
+          type: "column", 
+          name: "Support Staff",
+          legendText: "Support Staff",
+          axisYType: "secondary",
+          showInLegend: true,
+          dataPoints:[
+            { label: "2010", y: 52107 },
+            { label: "2011", y: 47295 },
+            { label: "2012", y: 47105 },
+            { label: "2013", y: 49353 },
+            { label: "2014", y: 61638 },
+            { label: "2015", y: 57842 },
+            { label: "2016", y: 60199 },
+            { label: "2017", y: 55534 },
+            { label: "2018", y: 55974 },
+            { label: "2019", y: 54647 },
+            { label: "2020", y: 55080 }
+          ]
+        }]
+      });
+      chart.render();
+      
+      function toggleDataSeries(e) {
+        if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+          e.dataSeries.visible = false;
+        }
+        else {
+          e.dataSeries.visible = true;
+        }
+        chart.render();
+      }
+      
+      }
+      </script>
+      </div>
+
+  </head>
+  <br>
+ 
+  <!-- Tab links -->
+<div class="tab justify-content-center" width="1608" height="740">
+  <h2>Comparison of Major Fires over the Years</h2>
+  <button class="tablinks" onclick="openFire(event, '10_years')">2019 -> 2020</button>
+  <button class="tablinks" onclick="openFire(event, 'blackSat')">Black Saturday 2009</button>
+  <button class="tablinks" onclick="openFire(event, 'alpine')">Alpine / Canberra 2003</button>
+  <button class="tablinks" onclick="openFire(event, 'ashWed')">Ash Wednesday 1983</button>
+  <button class="tablinks" onclick="openFire(event, 'blackFri')">Black Friday</button>
+</div>
+
+<!-- Tab content -->
+<div id="10_years" class="tabcontent">
+  <h3>2019 -> 2020 Fire Season</h3>
+  <p> States Affected : Australia Wide</p>
+  <p>Total Deaths : 33 people</p>
+  <p>Total Fire Figthers Lost : 9</p>
+  <p>Total Houses Lost : 3094</p>
+  <p>Total Land Burnt : Over 17 Million Hectares</p>
+</div>
+
+<div id="blackSat" class="tabcontent">
+  <h3>Black Saturday 2009</h3>
+  <p> States Affected : Victoria</p>
+  <p>Total Deaths : 173 people</p>
+  <p>Total Fire Figthers Lost : 2</p>
+  <p>Total Houses Lost : 2055</p>
+  <p>Total Land Burnt : Over 400,000 hectares</p>
+</div>
+
+<div id="alpine" class="tabcontent">
+  <h3>Alpine / Canberra 2003</h3>
+  <p> States Affected : NSW, VIC & ACT</p>
+  <p>Total Deaths : 4 people</p>
+  <p>Total Houses Lost : Over 500</p>
+  <p>Total Land Burnt : Over 1.2 million hectares</p>
+</div>
+
+<div id="ashWed" class="tabcontent">
+  <h3>Ash Wednesday 1983</h3>
+  <p> States Affected : VIC & SA</p>
+  <p>Total Deaths : 75 people</p>
+  <p>Total Houses Lost : 2463</p>
+  <p>Total Land Burnt : 418,000 hectares</p>
+</div>
+
+<div id="blackFri" class="tabcontent">
+  <h3>Black Friday</h3>
+  <p> States Affected : Victoria</p>
+  <p>Total Deaths : 71 people</p>
+  <p>Total Houses Lost : Over 1000</p>
+  <p>Total Land Burnt : 1.5 -> 2 million hectares</p>
+</div>
+<br>
+
+    <body>
+    <div id="chartContainer" style="height: 370px; width: 60%; text-align:center;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  
+  
+    <script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+    <script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js'></script>
+    <script type="text/javascript" src='logic.js'></script>
+</body>
+</html>
