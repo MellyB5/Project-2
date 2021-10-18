@@ -50,8 +50,13 @@ var trace_2 = {
     name: "19-20"
 };
 
+var layout = {
+    title: "Inhaler Sales per Region",
+    yaxis: {title: "Number of Sales"}
+};
+
     // console.log(data);
-    Plotly.newPlot("bar", [trace_1, trace_2])
+    Plotly.newPlot("bar", [trace_1, trace_2], layout)
 
 })
 }
