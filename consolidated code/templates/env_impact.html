@@ -8,13 +8,15 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <!-- <link rel="stylesheet" href="css/style.css"> -->
   <!-- <link rel="stylesheet" href="css/d3Style.css"> -->
-  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+  <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}"> -->
   <link rel="stylesheet" href="{{url_for('static', filename='css/envStyle.css')}}">
-  <link rel="stylesheet" href="{{url_for('static', filename='css/d3Style.css')}}">
+  <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/d3Style.css')}}"> -->
 
 </head>
 
 <body>
+
+
 
   <div class="container">
     <!-- <div class="col-xs-12  col-md-9">
@@ -38,7 +40,7 @@
   <!-- Nav Bar -->
   <div class="container">
     <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid" style="background-color: brown">
+      <div class="container-fluid" style="background-color:  rgb(155, 84, 67)">
         <ul class="navbar_ul">
           <li class="navbar_li"><a class="active" href="/">Home</a></li>
           <li class="navbar_li"><a href="/health_impact">Health Impact</a></li>
@@ -50,11 +52,25 @@
     </nav>
   </div>
 
+  <div class="container" id="introduction">
+    <p>The sheer number of animals killed during the 2019/20 Australian bushfires was devastating,
+      with estimates upwards of 3 billion animals killed. Whilst many were killed by the heat and
+      flames of the fires, others died as a result of starvation, dehydration and predation by feral
+      animals. The Wildlife and Threated Species Bushfire Recovery Expert Panel has identified a
+      provisional list of species that require urgent management intervention. Whilst many factors
+      are taken into account when evaluating the threatened status of these animals, some key factors
+      include their status prior to the fires and the amount of their habitat and food sources that
+      were destroyed by the fires. </p>
+    <p><strong>Click on the animal finder below to explore the list of threatened species</strong></p>
+    <br>
+  </div>
+
+
   <div class="container">
 
-    
+
     <h1></h1>
-  <div class="row">
+    <div class="row">
       <div class="col-4">
         <div class="container-fluid">
           <div class="text-left">
@@ -73,7 +89,7 @@
               <li class="list-group-item" id="animal-type">type</li>
               <li class="list-group-item" id="animal-states">states</li>
             </ul>
-            
+
           </div>
         </div>
       </div>
@@ -82,6 +98,8 @@
 
       <div class="col-8">
         <h4>Go on, guess how much of their habitat was burnt...</h4>
+
+        <!-- comment out section of code that places value of slider on the screen -->
         <!-- <div class="row align-items-center"> -->
         <!-- <div class="col-sm-2"> -->
         <!-- <p id="value-fill"></p> -->
@@ -91,19 +109,18 @@
         <!-- </div> -->
         <!-- </div> -->
 
-        <!-- <div id="slider-response"><p>Did they get it right?</p></div> -->
         <div id="liveAlertPlaceholder"></div>
         <button type="button" class="btn envButton" id="liveAlertBtn">Check your answer</button>
         <br>
         <br>
         <div id="threatened-status">
-          <h4>This animal's threatened status is now:  <span class="badge threatButton">Endangered</span></h4>
+          <h4>This animal's threatened status is now: <span class="badge threatButton">Endangered</span></h4>
         </div>
       </div>
 
     </div>
-    
-    
+
+
 
   </div>
   </div>
@@ -111,8 +128,10 @@
 
   <!-- Footer-->
   <div id="footer">
-    
+    <a href="https://www.awe.gov.au/environment/biodiversity/bushfire-recovery/bushfire-impacts">
+      Data was sourced from The Austrlian Government Department of Agriculture, Water and the Environment </a>
   </div>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
