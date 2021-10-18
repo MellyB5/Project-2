@@ -16,3 +16,5 @@
  - Data cleaning & transformation was undertaken in ETL - Health Data.ipynb, which are then saved into csv format.
  - Once done, a table was created using SQL query (refer to table_schema.sql), and the above csv files were loaded manually via pgAdmin into Health_db database.
  - Due to time contstraint, visualisation has only been undertaken for inhaler sales information
+
+Note: the above ETL codes are stored inside consolidated_code folder
