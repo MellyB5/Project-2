@@ -1,0 +1,116 @@
+
+
+/*
+#32b6c6
+#a8dbe2
+#ffffff
+#dc968d
+#a52a2a 
+*/
+
+.iframeContainer {
+  padding: 20px;
+  border: 1px solid #e3e3e3;
+}
+
+/* Sticky Footer rules (https://getbootstrap.com/examples/sticky-footer/) */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Padding bottom by footer height */
+  padding-bottom: 80px;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%; /* Set the fixed height of the footer here */
+  height: 10px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+#footer p {
+  margin: 0;
+  font-size: 16px;
+}
+
+#image-silhouette {
+  width: 100px;
+  height: 100px;
+  fill:aquamarine;
+}
+
+#bushfire_header {
+  /* background-image: "{{url_for('static', filename='images/bushfire1.jpeg')}}"; */
+  background-image: url("Images/bushfire1.jpeg");
+  height: 400x; 
+  background-position: center; 
+  background-color: brown;
+  background-size: cover;
+}
+
+.display-3{
+  position: absolute;
+  left:35%;
+  top: 1%;
+  color:rgb(0, 0, 0);
+  font-weight:normal;
+  font-size: 200%;
+}
+
+.navbar_ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(155, 84, 67);
+  }
+
+.navbar_li {
+  float: left;
+}
+
+.navbar_li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar_li a:hover {
+  background-color: #111;
+}
+
+.envButton {
+  background-color: #32b6c6;
+}
+
+.threatButton {
+  background-color: #dc968d;
+}
+
+#threatened-status {display: none;}
+
+/* Mobile Rules */
+@media screen and (max-width: 530px) {
+  .stateText {
+    display: none;
+  }
+
+  .aText {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .aText {
+    font-size: 13px;
+  }
+}
