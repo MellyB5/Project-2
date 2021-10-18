@@ -100,6 +100,13 @@ def health():
     return jsonify(sales_dict)
 
 # -----------------------------------------------------------------------------------
+# ----------------------------Volunteer Statistics------------------------------------
+
+@app.route("/volunteer")
+def volunteer():
+
+    # # Return template and data
+    return render_template("volunteers.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
