@@ -1,9 +1,7 @@
-import numpy as np
 import pandas as pd
 import datetime as dt
 
 import sqlalchemy
-from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 from config import postgresql_pword
@@ -16,15 +14,6 @@ from flask import Flask, jsonify, render_template
 #################################################
 env_engine = create_engine(f'postgresql://postgres:{postgresql_pword}@localhost:5432/Project-2')
 env_conn = env_engine.connect()
-# reflect an existing database into a new model
-# Base = automap_base()
-# reflect the tables
-# Base.prepare(env_engine, reflect=True)
-
-# Save references to the tables
-# protected_animals = Base.classes.protected_animals
-
-
 
 #################################################
 # Flask Setup
