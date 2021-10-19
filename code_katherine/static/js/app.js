@@ -6,9 +6,9 @@ d3.json(url).then((dataA) => {
 
     var numAnimals = Object.keys(dataA).length;
 
+    // variables for the top and bottom of the range of habitat destroyed
     var bottom = 0;
     var top = 100;
-    // var near_enough = 1000; //dummy value to test if animal has been chosen yet
 
     // function to get the animal data
     function getAnimal(whichAnimal) {
@@ -45,18 +45,23 @@ d3.json(url).then((dataA) => {
         whichAnimal = Math.floor(Math.random() * (numAnimals));
         // console.log(whichAnimal);
         // getAnimal(whichAnimal);
-        return (whichAnimal);
+        return whichAnimal;
     }
 
     function getStatus(whichAnimal) {
         status = dataA[whichAnimal].status;
+<<<<<<< HEAD
         if (status === "0") {status = "migratory"}; // deal with 0 for migratory birds
         return (status)
+=======
+        if (status === 0) { status = "migratory" }; // deal with 0 for migratory birds
+        return status
+>>>>>>> katherine
     }
 
     function getDistribution(whichAnimal) {
         distribution = dataA[whichAnimal].distribution;
-        return (distribution)
+        return distribution
     }
 
     function threatColour(status) {
@@ -98,7 +103,7 @@ d3.json(url).then((dataA) => {
         bottom = 80;
         top = 100;
     };
-    
+
 
 
     // start over on click of button "Find an endangered animal"
@@ -160,9 +165,13 @@ d3.json(url).then((dataA) => {
             data-bs-dismiss="alert" aria-label="Close" ></button></div>`);
             d3.select("#threatened-status").style("display", "block");
             d3.select(".threatButton")
+<<<<<<< HEAD
             .text(status);
             d3.select(".threatButton")
             .style("background-color", threatColour(status));
+=======
+                .text(status);
+>>>>>>> katherine
         })
 
 
